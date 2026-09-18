@@ -1,0 +1,239 @@
+Project Millie General Instructions
+
+Project Millie is expected to run through the end of this week - everyone must author one task by EOD Friday (9/18 by 11:59pm PT)
+Compensation: $150 per accepted datapoint; $75/hr for reviews (tracked on Hubstaff)
+Project overview
+Welcome to Project Millie. This guide covers preparation, authoring, quality control, difficulty checking, and submission. Each task must pass both checks and receive independent expert approval before it is accepted.
+
+What a complete task contains
+Task details: the domain, professional situation, intended recipient, and required work product.
+Prompt: the request, including relevant constraints and permitted resources.
+Evidence: the information needed to solve the task, with verifiable sources or clearly fictional scenario records. Attachments are required when the task depends on them.
+Reference solution: an independently checked answer with supporting reasoning, calculations, and acceptable alternatives, where relevant.
+Rubric: specific, verifiable criteria for judging the response, weighted by professional importance.
+
+Complete only the components assigned to your role. Reference solutions, finalized rubrics, and evaluation responses are kept separate from the prompt author and from the materials given to the tested model.
+
+Domains
+Work within your assigned domain and specialty. Tasks should reflect the decisions, evidence, and professional standards relevant to that field.
+
+Finance: financial analysis, investment decisions, liquidity, valuation, and risk.
+
+Healthcare: clinical reasoning and healthcare decisions using fictional scenarios and verified medical evidence.
+
+Natural Science: research interpretation, experimental design, and scientific analysis.
+
+Law: applying verified authority to a defined fact pattern and jurisdiction.
+
+Industry and Engineering: technical analysis, troubleshooting, design decisions, and operational tradeoffs.
+
+Creating your task
+Step 1 Review your assignment
+Read these instructions and the requirements for your assigned domain and role.
+
+Sign in to the Project Millie task workspace. Open your assigned task or start a draft as directed by the project team. Keep the task ID for review questions. If your assignment or access is missing, contact the project team before creating duplicate work.
+
+Step 2 Define the professional situation
+Choose an original problem that fits your expertise. Before writing the prompt, establish:
+
+Who is doing the work and who will use the response.
+What decision, analysis, or other work product is needed.
+Which facts, constraints, dates, units, and jurisdiction matter.
+Which evidence and tools the respondent may use, including whether external research is allowed.
+What makes the work require professional judgment or synthesis.
+Keep related questions tied to one objective. A qualified peer should be able to understand the assignment without asking you to supply an unstated assumption.
+
+Step 3 Prepare the evidence
+Assemble the information the respondent needs. Use descriptive filenames and identify which files are inputs. Check that each required file opens and that its contents are legible.
+
+Public sources: verify the publisher, title, relevant date, and exact page, section, or table supporting the claim. Confirm that sources are accessible through the permitted resources and that you have permission to share any uploaded material.
+Fictional records: use clearly fictional clients, patients, companies, transactions, or operational records. Keep shared facts consistent across files. The evidence expert must calculate derived values reproducibly before incorporating them into the records.
+Evidence boundaries: specify whether the respondent uses supplied materials, public research, or both. Required information cannot exist only in a hidden reference answer.
+Never invent a law, clinical guideline, publication, filing, standard, or other public authority and present it as real. If a material source cannot be verified, resolve or redesign that part of the task before proceeding.
+
+Do not upload confidential employer, client, or patient information. Do not include solution notes or reviewer comments in input materials.
+
+Writing the request
+Step 4 Write and check the prompt
+Write as though you are assigning the work to a professional peer who has not seen this scenario. Explain the objective and the expected output. Include enough context to make the task solvable without prescribing the answer.
+
+Identify the professional role, recipient, and decision or question.
+Specify the required work product and any meaningful format or length limits.
+Name the supplied inputs and the rules for external sources or tools.
+State the applicable dates, jurisdiction, units, assumptions, and constraints.
+Require evidence and reasoning where they are necessary to support the response.
+Build difficulty through connected work: selecting relevant evidence, reconciling different records, deriving intermediate results, or assessing alternatives. Each requirement should serve the professional objective. Extra pages, obscure wording, and arbitrary output restrictions do not establish useful difficulty.
+
+Check for answer leakage
+Read the prompt and all model-visible materials together. Remove expected conclusions, worked solutions, answer-bearing hints, completed outputs, rubric text, and evaluation commentary. Inspect spreadsheet comments, hidden sheets, document annotations, and filenames where applicable. Keep genuine task inputs; removing necessary facts makes the problem unfair.
+
+Step 5 Complete your role and hand off the task
+A complete task needs a supported solution and fair evaluation criteria, but the prompt author does not create or inspect every hidden component. Follow your assignment and use the project handoff process when another role is needed.
+
+For prompt authors
+Check the prompt against the evidence the respondent is allowed to see. Confirm that the requested work is clear, the inputs are sufficient, and no answer has leaked into the request. Submit your component for the next assigned role when ready.
+
+Do not inspect reference answers, finalized rubrics, hidden scenario conclusions, or screening-model responses to revise the prompt. If you receive restricted material accidentally, notify the project team before continuing as the prompt author.
+
+For reviews
+First solve the problem independently using only the prompt and permitted inputs. Then document the solution in the restricted reference workspace:
+
+Answer every requested part and follow the same constraints as the tested model.
+Show material calculations and identify the evidence supporting key claims.
+State assumptions, limitations, and uncertainty where they affect the result.
+Document acceptable alternatives rather than treating one phrasing or method as the only valid answer.
+If your solution depends on unavailable information, return the issue for correction. Do not repair an incomplete prompt by adding facts only to the hidden solution.
+
+For rubric creation
+Make each criterion assess one observable requirement. Connect it to the prompt and verified evidence. Use weights that reflect the importance of the work; there is no fixed number of criteria to reach.
+
+Criteria must be atomic
+Prefer criteria a reviewer can verify over broad judgments such as "excellent analysis."
+Do not penalize a defensible alternative merely because it differs from the reference.
+Avoid duplicate criteria and repeated penalties for the same underlying error.
+Use negative criteria only for specific, consequential mistakes. Do not add them to lower a model score.
+Authorship and tool use
+The prompt, reference solution, and rubric must reflect your own expert judgment. You may use generative AI to assist with drafting. The final writing must read as natural professional prose, not AI-generated text. Avoid AI-typical tics such as em-dashes, filler intensifiers ("crucial," "robust," "comprehensive"), over-formatted bullet lists, and formulaic phrasing like "it's not just X, it's Y." Read your work back and make sure it sounds like a professional explaining something to a colleague. Keep task materials within approved project systems.
+
+The independent reviewer must not be the person who authored the work being approved. Completing a component is not approval of the full task.
+
+Quality and difficulty checks
+Step 6 Complete quality control
+Once the assigned components are complete, request quality control through the project workflow. QC checks whether the task is accurate, supported, solvable, internally consistent, and fair to grade.
+
+Review each finding and correct the affected component within your role. Common issues include unsupported claims, inconsistent dates or units, arithmetic errors, missing inputs, answer leakage, and rubric requirements absent from the prompt.
+
+If a finding appears incorrect, provide the exact source or calculation supporting your position and request review. Do not dismiss it without evidence. All blocking findings must be resolved before the task can proceed.
+
+Step 7 Complete the model difficulty check
+After content QC passes, complete the required difficulty evaluation through the platform. The task is tested against the project's configured model and acceptance policy. A task is not eligible for submission merely because an expert considers it difficult.
+
+Use the result for the current task revision. The outcomes below describe their meaning; the platform may use different status labels.
+
+Result meaning
+
+Your next action
+
+Requirements met
+
+Proceed to submission once QC and all required difficulty checks are complete for this revision.
+
+Too easy
+
+Revise the reasoning required by the task while preserving clarity and solvability. Repeat affected checks.
+
+Pending or execution error
+
+Wait for completion or report the error. An incomplete run is not evidence that the model failed.
+
+Older revision
+
+Recheck the changed task. A previous result does not automatically apply to edited content.
+
+When revising an easy task, strengthen the professional problem: require useful reconciliation, intermediate calculations, or a justified choice across sources. Record what changed and why. Use only the feedback permitted for your role.
+
+Do not hide necessary information, add ambiguity, inflate rubric weights, or rerun unchanged work until a lower score appears. Very low scores can also signal an invalid or unfair task and may require further solvability review.
+
+Submission and review
+Step 8 Submit the current revision
+Before submitting, confirm that all required components are complete and that both QC and difficulty requirements have been met for the current revision. Saving a draft or requesting a check does not submit the task for independent review.
+
+Submit through the project workflow and retain the task ID. If submission is unavailable, check for unresolved findings, unfinished components, pending evaluations, or results made outdated by edits. Do not create another copy to bypass the issue.
+
+An independent domain expert reviews the task before acceptance. Respond to revision requests with the correction and its supporting evidence. Changes to the prompt, inputs, reference solution, or rubric may require fresh checks before resubmission.
+
+A task is accepted only after explicit project approval. Passing automated checks or submitting work does not, by itself, mean acceptance.
+
+Mandatory requirements and final checklist
+Before submitting, confirm each item below for your assigned work and the task's overall readiness:
+
+The task is original and belongs to the assigned domain and specialty. It is not copied or lightly rewritten from a public benchmark.
+The prompt defines the professional objective, required output, evidence rules, and all material constraints.
+A qualified peer can solve the task using the permitted information without relying on an unstated assumption.
+Required sources are verified and accessible. Public authority is genuine; fictional scenario records are clearly identified and consistent.
+Input files open correctly and contain no confidential information, leaked answers, hidden solution notes, or reviewer commentary.
+The assigned experts have completed the reference and rubric. Hidden work has remained separate from prompt authoring and model-visible inputs.
+Calculations and material claims are supported. Valid alternatives are handled fairly without duplicate penalties.
+Blocking QC findings are resolved, and all required difficulty results apply to the current revision.
+You have disclosed any permitted assistance and are ready to respond to independent review.
+Getting help
+Contact the project team with the task ID, the stage you are on, what you attempted, and the exact error or finding. Include a screenshot when useful, without exposing confidential or restricted material. For content disputes, include the source or calculation that supports your question.
+
+
+
+
+Examples:
+
+## Economics & Finance
+
+**Background**
+You are an actuary, currently working in the field of reserve valuation, specifically focusing on the calculation of various statutory reserves and reserves for financial reporting. Currently, due to the transition to IFRS 17, the calculation methods for various reserves have undergone significant changes. Your supervisor wants you to conduct the following research on the calculation of individual life insurance reserves and suggests that you refer to the contents of the fifth edition of the book 'Statutory Valuation of ILA Contracts'.
+
+**Question**
+1. Please list the four methods used by life insurance companies to calculate reserves prior to the advent of the Valuation Manual, and provide a detailed background on the characteristics of these calculation methods regarding assumptions such as premiums and operating expenses.
+2. Please indicate which of the aforementioned methods utilize the concept of Expense Allowance. Based on what practical operational characteristics of insurance companies did the concept of Expense Allowance arise? What factors are typically considered in its subsequent amortization adjustment?
+3. In practical work, it is often necessary to estimate reserve valuations between years. Using a term life policy as an example, please explain how reserves should be estimated under the assumption of continuous dates, identifying the specific method typically used for this estimation.
+
+**Rubrics**
+
+*Factual Information*
+- **+9** List the four reserve calculation methods prior to the advent of the Valuation Manual: Net Level Premium Method (NLP), Full Preliminary Term Method (FPT), Modified Reserve Method, and Commissioners Reserve Valuation Method (CRVM).
+- **+7** Elucidate that the Full Preliminary Term (FPT) sets the first-year net premium as the 'net premium for one-year term insurance,' implying that the first year covers only the cost of risk for that year.
+- **+5** Point out that expenses (and lapses) are not explicitly assumed in the Net Level Premium Method (NLP) valuation formula and NLP is calculated solely based on expected future business cash flows.
+
+*Analytical Reasoning*
+- **+8** Analyze the reason for the proposal of the Expense Allowance concept, namely that the first-year acquisition costs of life insurance contracts are extremely high, necessitating a mechanism for offsetting and amortization.
+- **-4** The model failed to point out that the Force of Interest method is typically used for estimation.
+
+*Structure and Formatting*
+- **-3** The formulas provided do not use Markdown formula blocks or LaTeX syntax, but instead use plain text or garbled characters, resulting in mathematical symbols that cannot be correctly read.
+
+---
+
+## Law
+
+**Background**
+The UK government, through its intelligence agencies, has ascertained that a cohort of migrants from Northern Nigeria harbors extremist religious views, posing a threat to British society. Intelligence sources further revealed a conspiracy by said migrants to perpetrate terror attacks across the United Kingdom. Acting swiftly, the British Prime Minister persuaded Parliament to establish a Tribunal of Inquiry to investigate the matter. Furthermore, the Prime Minister contacted the President of Nigeria, advising the establishment of a National Tribunal of Inquiry to investigate religious extremism within that country.
+
+**Question**
+Discuss the legal basis for the President of Nigeria to establish a National Tribunal of Inquiry to investigate religious extremism in Nigeria.
+
+**Rubrics**
+
+*Factual Information*
+- **+10** Cite the provisions regarding executive powers pursuant to Section 5 of the 1999 Constitution of Nigeria.
+- **+9** Point out that the powers of the President of Nigeria are circumscribed by the legislative scope of the National Assembly.
+- **+8** Point out that the Tribunals of Inquiry Act is deemed an existing law pursuant to Section 315 of the Constitution, yet it lacks constitutional validity at the federal level.
+- **-3** The response includes suggestions regarding administrative engagement by security agencies, which constitutes an irrelevant and extraneous point.
+
+*Analytical Reasoning*
+- **+6** Argue that the National Assembly lacks the jurisdiction to enact legislation regarding Tribunals of Inquiry applicable to the entire Federation.
+- **-2** The model incorrectly discusses the legal basis from the perspective of international or diplomatic cooperation, rather than strictly based on Nigerian domestic law.
+
+*Structure and Formatting*
+- **-4** The model fails to point out that the only remedy for establishing a National "Tribunal of Inquiry" is a constitutional amendment, or fails to mention the futility of the National Assembly enacting special laws.
+
+---
+
+## Healthcare & Medicine
+
+**Background**
+Hypothesis: Do specifically enriched bacteria in the gut of Crohn's disease (CD) patients inhibit the expression of the bile acid transporter ASBT via the activation of inflammatory signaling pathways, thereby reducing intestinal bile acid reabsorption and causing luminal bile acid accumulation? Does this subsequently promote *Clostridioides difficile* spore germination, ultimately exacerbating the incidence and recurrence of CDI?
+
+**Question**
+Please design an experimental protocol to verify this mechanism.
+
+**Rubrics**
+
+*Factual Information*
+- **+8** Explicitly propose causal perturbation strategies capable of directly testing the necessity of key nodes, and design clearly controlled functional validation experiments based on these. Specifically, the design must employ loss-of-function approaches targeting ASBT or its upstream inflammatory signaling nodes (e.g., inhibitors or KO mouse models) to compare changes in bile acid transport function or relevant phenotypes pre- and post-perturbation, thereby determining the causal status of the molecule in the hypothesized mechanism. Mere observational detection or correlation analysis does not constitute valid causal validation."
+- **+7** Utilize Inflammatory Bowel Disease models (DSS or TNBS) for mechanistic exploration in animal experiments.
+- **+6** Explicitly define clinical cohort grouping and follow-up design. The model must strictly categorize CD patients into 'CD+CDI' and 'CD' groups, and conduct prospective follow-up on the CDI group to distinguish between recurrent (rCDI) and non-recurrent subgroups.
+
+*Analytical Reasoning*
+- **+8** The experimental design establishes clear control groups in key mechanistic validation steps to distinguish 'effects mediated by target bacteria or inflammatory signals' from background effects; for example, including non-colonized controls, non-target bacteria controls, or non-induced inflammation controls, ensuring that changes in ASBT expression and relevant phenotypes are attributable.
+- **-6** The experimental design fails to detect key molecular indicators (e.g., ASBT protein/mRNA expression, intestinal bile acid concentration, inflammatory cytokines), or relies solely on macroscopic phenotypic observations (e.g., recurrence rate) without molecular-level validation.
+
+*Structure and Formatting*
+- **-7** The experimental protocol lacks verification of intermediate mechanistic steps (e.g., omitting detection of ASBT expression, spore germination), directly linking microbiota changes to CDI recurrence (functional outcome).
+- **-9** Substitutes specific mechanistic action with macroscopic disease or ecological background descriptions.

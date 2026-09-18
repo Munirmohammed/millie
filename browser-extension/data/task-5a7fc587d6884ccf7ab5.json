@@ -1,0 +1,408 @@
+{
+    "workspace":  {
+                      "professionalRole":  "Senior Director of Corporate Finance, Solaire Cold Chain Logistics, Inc. (a private, sponsor-owned refrigerated warehousing and distribution company)",
+                      "recipient":  "The company\u0027s Chief Financial Officer",
+                      "decisionToMake":  "Whether a proposed sale-leaseback of the company\u0027s Joliet, Illinois distribution center can close as structured, both under U.S. GAAP sale-leaseback accounting and under the negative covenants and financial covenant of the company\u0027s existing senior secured credit agreement.",
+                      "deliverable":  "A written compliance memo to the CFO that reaches a supported conclusion on the GAAP accounting treatment of the transaction, the resulting Consolidated Net Leverage Ratio, and compliance with the credit agreement\u0027s Sale and Leaseback Transactions covenant, together with a recommendation on whether the deal can close as structured.",
+                      "jurisdiction":  "United States (U.S. GAAP)",
+                      "asOfDate":  "June 30, 2026 (trailing twelve months then ended); proposed transaction anticipated to close by September 30, 2026.",
+                      "allowedToolsAndSources":  "Respondent may use only the three supplied exhibits (financial summary, credit agreement excerpts, transaction term sheet) for all figures and contract terms; no external research is needed or expected to supply any number. Respondent may and should draw on their own knowledge of U.S. GAAP (FASB ASC 842) to identify and cite the governing accounting guidance.",
+                      "webSearchBoundary":  "Supplied evidence only - no web search",
+                      "expectedExpertEffort":  "Approximately 45-60 minutes for a qualified corporate finance or credit analyst familiar with ASC 842 lease accounting and leveraged credit agreements.",
+                      "whyProfessionalSynthesis":  "The respondent has to reconcile three different document types the way a real credit analyst would. They must apply a specific, easily-missed provision of lease accounting (the repurchase-option test in ASC 842-40-25-3) instead of defaulting to the more commonly known lease-classification tests. They must correctly execute a defined-term EBITDA build whose addback cap depends on reading the definition\u0027s exact order of operations. And they must recognize that two separate covenants govern the same transaction, one that turns on the GAAP conclusion and one that is defined to apply regardless of it, without letting the two collapse into a single answer."
+                  },
+    "promptAndDeliverable":  {
+                                 "prompt":  "You are the Senior Director of Corporate Finance at Solaire Cold Chain Logistics, Inc., a private, sponsor-owned refrigerated warehousing and distribution company. Solaire\u0027s CFO has asked you to evaluate a proposed sale-leaseback of the company\u0027s Joliet, Illinois distribution center before she takes the deal to the board and to the administrative agent under Solaire\u0027s senior secured credit agreement.\n\nWrite a compliance memo to the CFO (two to three pages is sufficient) that reaches a supported conclusion on (1) how the transaction must be accounted for under U.S. GAAP, (2) whether it can close as structured under Solaire\u0027s existing credit agreement without lender consent, and (3) what would need to change if it cannot.\n\nUse only the three exhibits supplied as evidence. All financial and contractual figures are fictional and complete as given; no external research is needed to fill in a number. You may rely on your own knowledge of U.S. GAAP (FASB ASC 842) to identify and apply the relevant authoritative guidance, and should cite the specific paragraph(s) you rely on.\n\nAll dollar amounts are in USD millions unless noted otherwise. Solaire\u0027s fiscal year ends December 31. The most recent compliance certificate under the credit agreement is for the trailing twelve months ended June 30, 2026. Treat every figure in the exhibits as accurate and final.\n\nSpecifically:\n\n1. Determine whether the proposed sale of the Joliet facility, combined with the accompanying leaseback described in Exhibit C, qualifies as a sale under ASC 842-40. State the specific provision(s) that govern your conclusion.\n2. Compute Solaire\u0027s Consolidated EBITDA for the trailing twelve months ended June 30, 2026, as that term is defined in the credit agreement (Exhibit B), including the effect of any applicable limitation on addbacks.\n3. Assuming the transaction closes on the terms in Exhibit C and the net proceeds are applied as described there, compute the Consolidated Net Leverage Ratio immediately following closing and state whether Solaire remains in compliance with the maximum leverage covenant.\n4. Determine whether the transaction as sized can proceed under the credit agreement\u0027s Sale and Leaseback Transactions covenant without further lender consent. If it cannot, quantify the shortfall.\n5. Recommend whether the deal can close as currently structured, and if not, identify what would need to change (deal size, structure, or lender consent).\n\nShow the arithmetic behind every figure you report, not just the final numbers.",
+                                 "deliverableContract":  "The response must, at minimum:\n- State a clear conclusion on whether the transfer qualifies as a sale under ASC 842-40, naming the specific governing paragraph(s) (or their substance) rather than a bare assertion.\n- Show the Consolidated EBITDA build from GAAP net income through the interest/tax/D\u0026A addbacks and the 15% addback cap, ending in a single numeric TTM Consolidated EBITDA figure.\n- Show the post-closing debt and cash figures and state a numeric Consolidated Net Leverage Ratio (to at least two decimal places), with an explicit compliant/non-compliant statement against the 4.25x maximum.\n- Separately state whether the transaction complies with the Sale and Leaseback Transactions covenant, independent of the GAAP sale/financing conclusion, quantifying any shortfall in dollars.\n- End with an explicit recommendation on whether the deal can close as structured and, if not, what would have to change.\n- Length target: roughly 2-3 pages; format: memo addressed to the CFO with the four analyses above as separately identifiable sections."
+                             },
+    "facts":  {
+                  "canonicalFacts":  [
+                                         {
+                                             "key":  "solaire.ttm.net_income",
+                                             "value":  "24.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A, TTM financial summary"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.interest_expense_net",
+                                             "value":  "14.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.income_tax_expense",
+                                             "value":  "7.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.depreciation_amortization",
+                                             "value":  "9.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.stock_comp_addback",
+                                             "value":  "2.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.restructuring_severance",
+                                             "value":  "2.5",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.sponsor_mgmt_fees",
+                                             "value":  "1.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.transaction_advisory_costs",
+                                             "value":  "4.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.ttm.loss_on_disposal_equipment",
+                                             "value":  "1.5",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.balance.cash",
+                                             "value":  "22.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A, balance sheet as of 6/30/2026"
+                                         },
+                                         {
+                                             "key":  "solaire.balance.term_loan_b",
+                                             "value":  "180.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.balance.revolver_drawn",
+                                             "value":  "15.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.balance.other_secured_debt",
+                                             "value":  "5.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "solaire.balance.joliet_nbv",
+                                             "value":  "34.8",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit A"
+                                         },
+                                         {
+                                             "key":  "transaction.purchase_price",
+                                             "value":  "52.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit C, term sheet"
+                                         },
+                                         {
+                                             "key":  "transaction.closing_costs",
+                                             "value":  "1.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "transaction.lease_term_years",
+                                             "value":  "20",
+                                             "unit":  "years",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "transaction.base_rent_year1",
+                                             "value":  "3.4",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "transaction.rent_escalation_pct",
+                                             "value":  "2",
+                                             "unit":  "percent per year",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "transaction.repurchase_option_year",
+                                             "value":  "15",
+                                             "unit":  "lease year",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "transaction.repurchase_option_price",
+                                             "value":  "41.6",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit C"
+                                         },
+                                         {
+                                             "key":  "creditagreement.leverage_covenant_max",
+                                             "value":  "4.25",
+                                             "unit":  "x EBITDA",
+                                             "provenance":  "Exhibit B, Section 7.11"
+                                         },
+                                         {
+                                             "key":  "creditagreement.sale_leaseback_basket",
+                                             "value":  "40.0",
+                                             "unit":  "USD millions",
+                                             "provenance":  "Exhibit B, Section 7.09"
+                                         },
+                                         {
+                                             "key":  "creditagreement.ebitda_addback_cap_pct",
+                                             "value":  "15",
+                                             "unit":  "percent",
+                                             "provenance":  "Exhibit B, Section 1.01 definition of Consolidated EBITDA"
+                                         }
+                                     ],
+                  "derivations":  [
+                                      {
+                                          "id":  "unadjusted_ebitda",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.ttm.net_income, solaire.ttm.interest_expense_net, solaire.ttm.income_tax_expense, solaire.ttm.depreciation_amortization",
+                                          "result":  "54.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "ebitda_cap_base",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.ttm.stock_comp_addback",
+                                          "result":  "56.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "ebitda_addback_cap_dollar",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "creditagreement.ebitda_addback_cap_pct",
+                                          "result":  "8.4",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "consolidated_ebitda",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.ttm.restructuring_severance, solaire.ttm.sponsor_mgmt_fees, solaire.ttm.transaction_advisory_costs, solaire.ttm.loss_on_disposal_equipment",
+                                          "result":  "64.4",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "net_cash_proceeds",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "transaction.purchase_price, transaction.closing_costs",
+                                          "result":  "51.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "post_closing_cash",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.balance.cash, solaire.balance.revolver_drawn, solaire.balance.other_secured_debt",
+                                          "result":  "53.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "post_closing_total_debt",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.balance.term_loan_b",
+                                          "result":  "231.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "post_closing_net_debt",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "solaire.balance.cash, solaire.balance.term_loan_b, solaire.balance.revolver_drawn, solaire.balance.other_secured_debt",
+                                          "result":  "178.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      },
+                                      {
+                                          "id":  "post_closing_leverage_ratio",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "creditagreement.leverage_covenant_max",
+                                          "result":  "2.76",
+                                          "rounding":  "2 decimals",
+                                          "tolerance":  "0.02"
+                                      },
+                                      {
+                                          "id":  "sale_leaseback_basket_excess",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "transaction.purchase_price, creditagreement.sale_leaseback_basket",
+                                          "result":  "12.0",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.05"
+                                      }
+                                  ],
+                  "sources":  [
+                                  {
+                                      "id":  "asc-842-40-25-3",
+                                      "title":  "ASC 842-40-25-3, sale and leaseback transactions, seller-lessee repurchase option",
+                                      "authenticity":  "Real",
+                                      "origin":  "Retrieved",
+                                      "delivery":  "Hidden Only",
+                                      "publisher":  "Financial Accounting Standards Board",
+                                      "jurisdiction":  "United States",
+                                      "claimLocators":  "ASC 842-40-25-3",
+                                      "excerpt":  "If the seller-lessee has an option to repurchase the transferred asset, the existence of that option precludes the transfer from being accounted for as a sale unless both of the following conditions are met: (a) the exercise price of the option is the fair value of the asset at the time the option is exercised, and (b) there are alternative assets, substantially the same as the transferred asset, readily available in the marketplace.",
+                                      "contentHash":  "3132206665e44ecb1dc12b312ecbe6df3eec28e480883f076258486a5b86a55a",
+                                      "authoritativeUrl":  "https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/leases/leases__4_US/chapter_6_sand_l_US/63_determining_wheth_US.html",
+                                      "retrieved":  "2026-09-15",
+                                      "published":  "2016-02-25",
+                                      "effective":  "2019-01-01",
+                                      "licenseRights":  "FASB Accounting Standards Codification; copyrighted material owned by the Financial Accounting Standards Board, cited by paragraph reference for professional use, not reproduced in full."
+                                  },
+                                  {
+                                      "id":  "asc-842-40-25-4",
+                                      "title":  "ASC 842-40-25-4, accounting for a failed sale and leaseback as a financing",
+                                      "authenticity":  "Real",
+                                      "origin":  "Retrieved",
+                                      "delivery":  "Hidden Only",
+                                      "publisher":  "Financial Accounting Standards Board",
+                                      "jurisdiction":  "United States",
+                                      "claimLocators":  "ASC 842-40-25-4",
+                                      "excerpt":  "If the transfer of the asset does not qualify as a sale, the seller-lessee shall not derecognize the transferred asset and shall account for any amounts received from the buyer-lessor as a financial liability in accordance with other applicable Topics.",
+                                      "contentHash":  "c3734ce2859bd3dd96b78b6314a91e02a0a6391bf18184d96bd7fabb083407fe",
+                                      "authoritativeUrl":  "https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/leases/leases__4_US/chapter_6_sand_l_US/63_determining_wheth_US.html",
+                                      "retrieved":  "2026-09-15",
+                                      "published":  "2016-02-25",
+                                      "effective":  "2019-01-01",
+                                      "licenseRights":  "FASB Accounting Standards Codification; copyrighted material owned by the Financial Accounting Standards Board, cited by paragraph reference for professional use, not reproduced in full."
+                                  },
+                                  {
+                                      "id":  "exhibit-a",
+                                      "title":  "Exhibit A, Solaire trailing-twelve-month financial summary",
+                                      "authenticity":  "Synthetic",
+                                      "origin":  "Expert Supplied",
+                                      "delivery":  "Provided to Agent",
+                                      "excerpt":  "Income statement (TTM):\n- GAAP net income: $24.0\n- Interest expense, net: $14.0\n- Income tax expense: $7.0\n- Depreciation and amortization: $9.0\n- Non-cash stock-based compensation expense (included above): $2.0\n- Restructuring and severance costs (included above): $2.5\n- Sponsor management fees paid to majority owner (included above): $1.0\n- Transaction and advisory costs, including fees for the proposed Joliet sale-leaseback and for the Bramwell Foods add-on acquisition completed in April 2026 (included above): $4.0\n- Loss on disposal of equipment, unrelated to Joliet (included above): $1.5\n\nBalance sheet, as of June 30, 2026 (before the proposed transaction):\n- Cash and cash equivalents (unrestricted): $22.0\n- Term Loan B (senior secured): $180.0\n- Revolving credit facility, drawn: $15.0\n- Other secured debt: $5.0\n- Net book value of the Joliet facility (building only; land recorded separately): $34.8",
+                                      "contentHash":  "b490a405c8070c828894eadbb9b8cc9640016cbc9c51b05c6537a97ec893fca5",
+                                      "licenseRights":  "Authored for this task by the task expert; fictional content created for this exercise, no third-party rights implicated.",
+                                      "claimLocators":  "Income statement and balance sheet, Exhibit A"
+                                  },
+                                  {
+                                      "id":  "exhibit-b",
+                                      "title":  "Exhibit B, Solaire Senior Secured Credit Agreement excerpts",
+                                      "authenticity":  "Synthetic",
+                                      "origin":  "Expert Supplied",
+                                      "delivery":  "Provided to Agent",
+                                      "excerpt":  "Section 1.01, Definitions (selected):\n\n\"Consolidated Net Income\" means, for any period, the net income of the Loan Parties for such period as determined in accordance with GAAP. Solaire has no non-wholly-owned subsidiaries, so Consolidated Net Income for the relevant period equals the GAAP net income reported in Exhibit A.\n\n\"Consolidated EBITDA\" means, for any period, Consolidated Net Income for such period plus, without duplication and to the extent deducted in determining Consolidated Net Income for such period, (a) interest expense, net, (b) income tax expense, (c) depreciation and amortization, (d) non-cash stock-based compensation expense, (e) restructuring and severance costs, (f) fees paid to the Sponsor pursuant to the management services agreement, (g) fees and expenses incurred in connection with any acquisition, disposition, or financing transaction, whether or not consummated, and (h) losses on the disposition of assets outside the ordinary course of business; provided that the aggregate amount added back pursuant to clauses (e) through (h) for any period shall not exceed 15% of Consolidated EBITDA for such period, calculated before giving effect to the addbacks under clauses (e) through (h) (but after giving effect to the addback under clause (d)).\n\n\"Consolidated Net Leverage Ratio\" means, as of any date of determination, the ratio of (a) Consolidated Total Debt as of such date, minus unrestricted cash and cash equivalents of the Loan Parties as of such date, to (b) Consolidated EBITDA for the most recently ended Test Period.\n\n\"Consolidated Total Debt\" means, as of any date, the aggregate outstanding principal amount of Indebtedness of the Loan Parties, determined on a consolidated basis.\n\n\"Indebtedness\" means, without duplication, (i) all obligations for borrowed money, (ii) all Capitalized Lease Obligations, and (iii) all obligations that would, in accordance with GAAP, be characterized as a financing (rather than a sale) as a result of a failed sale and leaseback transaction, in each case whether or not required to be reflected as debt on the balance sheet.\n\nSection 7.09, Sale and Leaseback Transactions: No Loan Party shall enter into any arrangement, directly or indirectly, whereby it sells or transfers any property and thereafter rents or leases such property (a \"Sale and Leaseback Transaction\"), whether or not such transaction is characterized as a sale for accounting purposes, except for Sale and Leaseback Transactions involving aggregate consideration not to exceed $40.0 million in the aggregate for the Loan Parties taken as a whole during the term of this Agreement.\n\nSection 7.11, Financial Covenant: The Loan Parties shall not permit the Consolidated Net Leverage Ratio as of the last day of any fiscal quarter to exceed 4.25:1.00.",
+                                      "contentHash":  "5ffc51e1a0790f7b75dba5ce862e31b2d317670b2c16aaf4980087ad94e05c59",
+                                      "licenseRights":  "Authored for this task by the task expert; fictional content created for this exercise, no third-party rights implicated.",
+                                      "claimLocators":  "Section 1.01, 7.09, 7.11, Exhibit B"
+                                  },
+                                  {
+                                      "id":  "exhibit-c",
+                                      "title":  "Exhibit C, proposed sale-leaseback term sheet",
+                                      "authenticity":  "Synthetic",
+                                      "origin":  "Expert Supplied",
+                                      "delivery":  "Provided to Agent",
+                                      "excerpt":  "Seller: Solaire Cold Chain Logistics, Inc. Buyer: Meridian Industrial REIT, Inc.\nPurchase price: $52.0 million cash, payable at closing.\nEstimated seller-side closing costs (legal, broker, advisory): $1.0 million, payable at closing from proceeds.\nLeaseback: triple-net lease of the same facility to Solaire, initial term 20 years, annual base rent of $3.4 million in year one, escalating 2% annually.\nPurchase option: Solaire has the option, exercisable at the end of lease year 15, to repurchase the facility for a fixed price of $41.6 million, stated in the lease and not subject to adjustment for the fair value of the property at the time the option becomes exercisable.\nUse of proceeds: repay the $15.0 million outstanding balance on the revolving credit facility in full; redeem the $5.0 million of other secured debt in full; retain the remaining net proceeds as unrestricted cash.\nAnticipated closing: no later than September 30, 2026.",
+                                      "contentHash":  "d4ad7818dbccf94a822301a776c16855303f14ec585ecd59dcd35ed29a094516",
+                                      "licenseRights":  "Authored for this task by the task expert; fictional content created for this exercise, no third-party rights implicated.",
+                                      "claimLocators":  "Transaction term sheet, Exhibit C"
+                                  }
+                              ]
+              },
+    "reference":  {
+                      "answer":  "1. The transaction does not qualify for sale accounting under ASC 842-40. The repurchase option is exercisable at a fixed price ($41.6 million) rather than fair value at exercise, which alone precludes sale treatment under ASC 842-40-25-3; the transfer is accounted for as a financing under ASC 842-40-25-4.\n2. Consolidated EBITDA for the TTM period is $64.4 million after applying the 15% addback cap.\n3. Post-closing Consolidated Net Leverage Ratio is approximately 2.76x, unchanged from pre-transaction and comfortably within the 4.25x maximum.\n4. The transaction breaches the Section 7.09 Sale and Leaseback Transactions covenant: the $52.0 million purchase price exceeds the $40.0 million basket by $12.0 million, regardless of the GAAP characterization.\n5. The deal cannot close as structured without lender consent (a basket increase or waiver) or resizing the transaction to $40.0 million or less; the leverage covenant is not the obstacle.",
+                      "workings":  "Unadjusted EBITDA = 24.0 (net income) + 14.0 (interest) + 7.0 (tax) + 9.0 (D\u0026A) = 54.0.\nCap base = 54.0 + 2.0 (uncapped stock comp addback) = 56.0. Cap = 15% x 56.0 = 8.4.\nCapped addbacks requested = 2.5 (restructuring) + 1.0 (sponsor fees) + 4.0 (transaction costs) + 1.5 (loss on disposal) = 9.0, exceeds the 8.4 cap, so only 8.4 is allowed.\nConsolidated EBITDA = 54.0 + 2.0 + 8.4 = 64.4.\nNet cash proceeds = 52.0 - 1.0 (closing costs) = 51.0.\nPost-closing cash = 22.0 + 52.0 - 1.0 - 15.0 (revolver repay) - 5.0 (other debt redemption) = 53.0.\nPost-closing total debt = 180.0 (Term Loan B, unchanged) + 51.0 (failed sale-leaseback financing obligation, which is Indebtedness under Section 1.01 clause (iii)) = 231.0.\nPost-closing net debt = 231.0 - 53.0 = 178.0, identical to the pre-transaction net debt of 200.0 - 22.0 = 178.0.\nLeverage ratio = 178.0 / 64.4 = 2.76x.\nSection 7.09 test: 52.0 purchase price vs 40.0 basket = 12.0 excess, tested independently of the GAAP conclusion because the covenant applies whether or not the transaction is a GAAP sale.",
+                      "sourceLocators":  "ASC 842-40-25-1\nASC 842-40-25-3\nASC 842-40-25-4\nExhibit B, Section 1.01 (definitions of Consolidated Net Income, Consolidated EBITDA, Consolidated Net Leverage Ratio, Consolidated Total Debt, Indebtedness)\nExhibit B, Section 7.09 (Sale and Leaseback Transactions)\nExhibit B, Section 7.11 (Financial Covenant)",
+                      "acceptableAlternatives":  "Recording the financing obligation at the gross $52.0 million (treating the $1.0 million of costs as an expense rather than a discount against the liability) is an acceptable alternative; it changes post-closing net debt to $179.0 million and the leverage ratio to approximately 2.78x, which does not change the compliance conclusion.\nA response that also flags the year-15 repurchase option as relevant to whether the leaseback itself would separately be a finance lease is acceptable additional context but is not required, since the repurchase option resolves the sale-accounting question on its own under ASC 842-40-25-3.",
+                      "calibratedUncertainty":  "High confidence on the sale-accounting conclusion and the leverage and basket calculations, which follow directly from the stated facts and unambiguous contract language. The only real judgment call is how the $1.0 million of transaction costs are treated (netted against the financing liability versus expensed), which is why both are accepted and neither changes the bottom-line conclusions.",
+                      "knownLimitations":  "Assumes Exhibit B\u0027s excerpts are complete with respect to the provisions at issue and that no other covenant basket, carve-out, or definition elsewhere in the credit agreement would alter the Section 7.09 or Section 7.11 analysis. Assumes Solaire has no non-wholly-owned subsidiaries, so Consolidated Net Income equals the GAAP net income reported in Exhibit A."
+                  },
+    "rubric":  {
+                   "criteria":  [
+                                    {
+                                        "stableId":  "sale-accounting-repurchase-option",
+                                        "weight":  "10",
+                                        "capabilityTag":  "gaap-citation",
+                                        "observableRequirement":  "Concludes the transaction fails sale accounting under ASC 842-40-25-3 specifically because the repurchase option is exercisable at a fixed price rather than fair value at the time of exercise, and cites this provision (or its substance) rather than a generic \"it\u0027s not a real sale\" statement.",
+                                        "acceptableVariants":  "Cites the substance of the two-condition repurchase-option test (fair-value exercise price and available alternative assets) without the exact paragraph number."
+                                    },
+                                    {
+                                        "stableId":  "failed-sale-financing-treatment",
+                                        "weight":  "7",
+                                        "capabilityTag":  "gaap-citation",
+                                        "observableRequirement":  "Cites ASC 842-40-25-4 (or its substance) for the consequence of a failed sale-leaseback: the seller-lessee does not derecognize the asset and accounts for the amounts received as a financial liability.",
+                                        "dependsOn":  "sale-accounting-repurchase-option"
+                                    },
+                                    {
+                                        "stableId":  "ebitda-build-unadjusted",
+                                        "weight":  "7",
+                                        "capabilityTag":  "financial-modeling",
+                                        "observableRequirement":  "Correctly builds unadjusted EBITDA of $54.0 million from GAAP net income of $24.0 million plus interest, tax, and D\u0026A."
+                                    },
+                                    {
+                                        "stableId":  "ebitda-addback-cap",
+                                        "weight":  "6",
+                                        "capabilityTag":  "financial-modeling",
+                                        "observableRequirement":  "Correctly applies the 15% addback cap: identifies that stock-based compensation is uncapped, computes the cap base as $56.0 million, the cap as $8.4 million, and disallows $0.6 million of the $9.0 million in capped addbacks, arriving at Consolidated EBITDA of $64.4 million.",
+                                        "dependsOn":  "ebitda-build-unadjusted"
+                                    },
+                                    {
+                                        "stableId":  "financing-obligation-is-indebtedness",
+                                        "weight":  "5",
+                                        "capabilityTag":  "covenant-analysis",
+                                        "observableRequirement":  "Correctly identifies the failed sale-leaseback financing obligation as Indebtedness under clause (iii) of the credit agreement\u0027s Indebtedness definition, rather than treating it as off-balance-sheet or irrelevant to the leverage covenant.",
+                                        "dependsOn":  "failed-sale-financing-treatment"
+                                    },
+                                    {
+                                        "stableId":  "ebitda-unaffected-by-financing",
+                                        "weight":  "9",
+                                        "capabilityTag":  "reasoning",
+                                        "observableRequirement":  "Recognizes that because the transaction is accounted for as a financing rather than a sale, it does not affect Consolidated EBITDA, so the same EBITDA figure applies before and after closing.",
+                                        "dependsOn":  "sale-accounting-repurchase-option"
+                                    },
+                                    {
+                                        "stableId":  "leverage-ratio-computation",
+                                        "weight":  "8",
+                                        "capabilityTag":  "financial-modeling",
+                                        "observableRequirement":  "Correctly computes post-closing Consolidated Total Debt of $231.0 million and cash of $53.0 million, arriving at unchanged net debt of $178.0 million and a leverage ratio of approximately 2.76x, and states that the leverage covenant is satisfied.",
+                                        "dependsOn":  "financing-obligation-is-indebtedness, ebitda-addback-cap"
+                                    },
+                                    {
+                                        "stableId":  "sale-leaseback-basket-analysis",
+                                        "weight":  "8",
+                                        "capabilityTag":  "covenant-analysis",
+                                        "observableRequirement":  "Independently analyzes the Section 7.09 Sale and Leaseback Transactions basket, recognizes that it applies whether or not the transaction is a GAAP sale, and concludes the $52.0 million purchase price exceeds the $40.0 million basket by $12.0 million."
+                                    },
+                                    {
+                                        "stableId":  "conflates-two-covenant-tests",
+                                        "weight":  "-5",
+                                        "capabilityTag":  "reasoning",
+                                        "observableRequirement":  "Treats the leverage-ratio outcome and the Section 7.09 basket outcome as the same question, for example by concluding the deal is fully compliant because leverage is satisfied, or by concluding it is blocked solely because of the GAAP financing characterization."
+                                    },
+                                    {
+                                        "stableId":  "repurchase-option-vs-lease-classification-confusion",
+                                        "weight":  "-4",
+                                        "capabilityTag":  "gaap-citation",
+                                        "observableRequirement":  "Concludes the repurchase option is immaterial to the accounting analysis, or substitutes a lease-classification analysis (title transfer, bargain purchase, economic life, present value tests) for the repurchase-option test without addressing the repurchase option itself.",
+                                        "followThroughOf":  "sale-accounting-repurchase-option"
+                                    },
+                                    {
+                                        "stableId":  "memo-structure",
+                                        "weight":  "-3",
+                                        "capabilityTag":  "output-structure",
+                                        "observableRequirement":  "Does not present the accounting conclusion, the EBITDA build, the leverage calculation, and the Section 7.09 analysis as separately identifiable parts of the memo, making the individual calculations hard to check against Exhibits A through C."
+                                    },
+                                    {
+                                        "stableId":  "numeric-precision",
+                                        "weight":  "-3",
+                                        "capabilityTag":  "output-structure",
+                                        "observableRequirement":  "Reports the leverage ratio or covenant threshold without at least two decimal places of precision, or mixes dollar figures in millions with unlabeled figures in a different unit, in a way that obscures whether the 4.25x threshold is met."
+                                    }
+                                ]
+               }
+}

@@ -1,0 +1,338 @@
+Project Millie Expert and Reviewer Instructions
+
+Updated workflow effective September 15 2026
+
+Workflow change. Effective immediately, the authoring expert creates the complete task package: task details, prompt, evidence, reference solution, and rubric. Reviewers do not author or rewrite any component. They independently judge the completed package. A task must pass peer review and content quality control before the model difficulty check, which is the final gate before acceptance.
+
+Project timing and compensation
+Every author must submit one complete task package by Friday September 18 2026 at 11 59 p m Pacific Time.
+Compensation remains 150 dollars per accepted datapoint and 75 dollars per hour for reviews tracked in Hubstaff.
+Workflow summary
+Stage
+
+Owner
+
+Required action
+
+Next route
+
+1. Task creation
+
+Original author
+
+Create the prompt, evidence, reference solution, and rubric as one internally consistent package.
+
+Double blind review queue
+
+2. Content QC
+
+QC reviewer
+
+Check accuracy, support, solvability, consistency, file quality, leakage, and grading fairness.
+
+Pass to difficulty or return to the original author
+
+3. Difficulty
+
+Configured model evaluation
+
+Evaluate the current reviewed and QC approved revision as the final gate.
+
+Accept or return to the original author
+
+4. Primary review
+
+Reviewer A and Reviewer B
+
+Review independently. Do not draft, repair, or rewrite task content.
+
+Agreement routes the task; disagreement goes to Reviewer C
+
+5. Resolution
+
+Reviewer C
+
+Resolve a discrepancy between the two primary reviews without authoring task content.
+
+Pass to QC or return to the original author
+
+
+What a complete task contains
+Task details that identify the domain, professional situation, intended recipient, and required work product.
+A prompt that states the request, material constraints, applicable dates and jurisdiction, required output, permitted tools, and evidence rules.
+Evidence sufficient to solve the task, using verified public sources or clearly fictional and internally consistent scenario records.
+A reference solution or golden that answers every requested part and documents material reasoning, calculations, sources, assumptions, limitations, and acceptable alternatives.
+A rubric made of atomic and verifiable criteria, with weights that reflect professional importance and negative criteria limited to consequential errors.
+
+Visibility rule. The author can inspect and revise every component of this package. The prompt, model-visible evidence, and tested-model materials must not reveal the reference solution, rubric, evaluation response, or hidden conclusions.
+
+Domains
+Finance covers financial analysis, investment decisions, liquidity, valuation, and risk.
+Healthcare covers clinical reasoning and healthcare decisions using fictional scenarios and verified medical evidence.
+Natural Science covers research interpretation, experimental design, and scientific analysis.
+Law covers applying verified authority to a defined fact pattern and jurisdiction.
+Industry and Engineering covers technical analysis, troubleshooting, design decisions, and operational tradeoffs.
+Creating the complete task package
+The original author owns the task through every revision cycle. A reviewer may identify an error or request a change, but only the original author edits the package.
+
+Step 1: Review the assignment
+Confirm the assigned domain, specialty, task ID, and workspace access. If the assignment or access is missing, contact the project team before creating a duplicate task.
+
+Step 2: Define the professional situation
+Identify who performs the work and who will use the response.
+Define the decision, analysis, or other work product the response must support.
+List the facts, constraints, dates, units, jurisdiction, evidence, and permitted tools that materially affect the work.
+Build difficulty through connected professional reasoning, such as evidence selection, record reconciliation, intermediate calculations, or a justified choice among alternatives.
+A qualified peer in the same specialty should understand and solve the assignment without asking for an unstated assumption.
+
+Step 3: Prepare the evidence
+For public sources, verify the publisher, title, date, and exact page, section, or table that supports each material claim.
+For fictional records, use clearly fictional people and organizations, keep shared facts consistent, and calculate derived values reproducibly.
+State whether the respondent may use supplied materials, public research, or both. Required facts cannot exist only in the reference solution.
+Use descriptive filenames. Confirm every required file opens, is legible, and contains no confidential employer, client, or patient information.
+Never invent a law, guideline, publication, filing, standard, or other public authority and present it as real.
+
+Step 4: Write and check the prompt
+Identify the professional role, recipient, objective, and required work product.
+Name the supplied inputs and the rules for external sources and tools.
+State applicable dates, jurisdiction, units, assumptions, and constraints.
+Require evidence and reasoning where they are necessary, without prescribing the conclusion.
+Read the prompt and all model-visible files together. Remove worked solutions, expected conclusions, answer-bearing hints, rubric text, evaluation commentary, and hidden notes or spreadsheet content that leaks the answer.
+
+Step 5: Create the reference solution
+Solve the task under the same evidence and tool rules stated in the prompt. The reference solution must be independently checkable and must not rely on facts unavailable to the tested model.
+
+Answer every requested part and produce the same type of work product requested from the tested model.
+Show material calculations and identify the evidence supporting key factual and professional conclusions.
+State assumptions, limitations, and uncertainty when they affect the result.
+Document acceptable alternative methods or conclusions and explain when each is defensible.
+If the prompt is incomplete or ambiguous, correct the prompt or evidence before finalizing the solution. Do not repair the task by adding hidden facts only to the golden.
+Step 6: Create the rubric
+Build the rubric from the prompt, evidence, and reference solution. Each criterion should assess one observable requirement and should be understandable without referring to another criterion.
+
+Use atomic criteria and assign weights according to professional importance. There is no target criterion count.
+Tie each criterion to an explicit prompt requirement or a necessary implication of the professional task.
+Prefer verifiable criteria over broad judgments such as excellent analysis.
+Allow defensible alternatives described in the reference solution.
+Avoid duplicate criteria, inverse duplicates, and repeated penalties for the same underlying error.
+Use negative criteria only for specific and consequential mistakes. Do not add penalties merely to lower a model score.
+Calibrate numerical tolerances to the complexity and professional use of the calculation.
+Step 7: Check package consistency
+Confirm that every rubric requirement is supported by the prompt and permitted evidence.
+Recalculate all material values and verify every source citation.
+Check that the reference solution answers the current prompt revision and that valid alternatives are treated fairly.
+Inspect all model-visible files for answer leakage, hidden comments, annotations, hidden sheets, or misleading filenames.
+Open every input and output file and verify that the contents are legible and professionally formatted.
+Step 8: Submit to review
+Submit the complete current revision to the double-blind review queue. Saving a draft does not submit a task. Retain the task ID and wait for the review outcome.
+
+Authorship and approved assistance
+The prompt, evidence, reference solution, and rubric must reflect the original domain expert's own judgment and be independently verified by that expert. You may use generative AI to assist with drafting. The final writing must read as natural professional prose, not AI-generated text. Avoid AI-typical tics such as em-dashes, filler intensifiers ("crucial," "robust," "comprehensive"), over-formatted bullet lists, and formulaic phrasing like "it's not just X, it's Y." Keep task materials inside approved project systems.
+
+
+Double blind peer review
+Two qualified reviewers independently evaluate the completed task package. Reviewers receive an anonymized task and do not see the other reviewer's identity or decision before submitting their own review.
+
+Reviewer responsibilities
+Review the prompt, evidence, reference solution, rubric, and all files as one package.
+Verify that the task is original, professionally realistic, solvable, internally consistent, and sufficiently supported.
+Reperform material reasoning and calculations needed to assess the reference solution.
+Check that rubric criteria are atomic, weighted appropriately, supported by the prompt and evidence, and fair to acceptable alternatives.
+Identify answer leakage, missing inputs, unsupported claims, ambiguous requirements, rubric overfit, and duplicate penalties.
+Record an approval decision or a specific revision decision with the source, calculation, or package location supporting each finding.
+
+No reviewer authoring. Reviewers must not draft, repair, rewrite, or directly edit the prompt, evidence, reference solution, rubric, or task files. Completing review findings is not authorship of the task.
+
+Primary review outcomes
+Reviewer A and Reviewer B
+
+Route
+
+Required action
+
+Both approve with no material discrepancy
+
+Content QC
+
+Lock the reviewed revision and send it to QC.
+
+Both request revision or reject with aligned findings
+
+Original author
+
+Return the consolidated findings. The author revises the complete package and resubmits it to the double-blind review queue.
+
+Decisions or material findings conflict
+
+Reviewer C
+
+Send the package and documented discrepancy to an independent third reviewer for a final review decision.
+
+
+Third reviewer resolution
+Reviewer C independently resolves any material discrepancy between the two primary reviews, including a conflict in decisions or findings. Reviewer C evaluates the completed package and the documented points of disagreement, but does not edit or author task content.
+
+If Reviewer C approves the task, route the reviewed revision to content QC.
+If Reviewer C identifies a correctable issue, return the task and specific findings to the original author.
+If Reviewer C cannot reach a defensible decision, treat that outcome as evidence that the task may be ambiguous, internally inconsistent, or unsolvable. Return it to the original author for correction or redesign.
+Revision loop
+The original author corrects every affected component, records what changed, and submits a new revision to the double-blind review queue. Any substantive edit makes prior review, QC, and difficulty results stale. The revised package must repeat the applicable gates.
+
+
+Content quality control
+QC begins after task creation. QC checks whether the package is accurate, supported, solvable, internally consistent, professionally realistic, free of answer leakage, and fair to grade.
+
+Verify public authority, source locations, material calculations, dates, units, and jurisdiction.
+Confirm that required inputs are present, open correctly, and agree with the prompt and reference solution.
+Check that each rubric criterion is supported, atomic, nonduplicative, and appropriately weighted.
+Check that the prompt and model-visible files contain no hidden solution, rubric, or evaluation content.
+Return every blocking issue to the original author with a precise location and supporting evidence.
+After a QC return, the author revises the package and submits it to the review queue. QC does not directly repair the task. A prior review or QC result does not apply automatically to a changed revision.
+
+Model difficulty check
+Run the model difficulty check only after content QC. Difficulty is the last gate before review.
+
+Result
+
+Route
+
+Required action
+
+Requirements met
+
+Accepted
+
+Accept the current revision after confirming all earlier gates remain valid.
+
+Too easy
+
+Original author
+
+Harden the professional reasoning while preserving clarity and solvability, then resubmit the revised package to the review queue.
+
+Too hard or unfair
+
+Original author
+
+Correct ambiguity, missing information, unreasonable scope, or another source of unfair difficulty, then resubmit to review.
+
+Pending or execution error
+
+Hold
+
+Wait for completion or report the error. An incomplete run is not evidence of model failure.
+
+Older revision
+
+Repeat gates
+
+Review and QC the changed package, then run difficulty on the current revision.
+
+
+When hardening an easy task, add useful reconciliation, intermediate calculations, source comparison, or a justified professional choice. Do not hide required information, add ambiguity, inflate rubric weights, or rerun an unchanged task until it receives a lower score.
+
+Acceptance
+A task moves to Accepted only when the same current revision has passed double-blind peer review, content QC, and the final model difficulty check. Submission, reviewer activity, or an automated run alone does not constitute acceptance.
+
+
+Role responsibility matrix
+Component or action
+
+Original author
+
+Reviewer A and B
+
+Reviewer C
+
+QC
+
+Prompt and evidence
+
+Create and revise
+
+Review only
+
+Decide only
+
+Check only
+
+Reference solution
+
+Create and revise
+
+Review only
+
+Decide only
+
+Check only
+
+Rubric
+
+Create and revise
+
+Review only
+
+Decide only
+
+Check only
+
+Primary decision
+
+Receive outcome
+
+Decide independently
+
+Not involved unless decisions or findings conflict
+
+Not involved
+
+Discrepancy resolution
+
+Receive outcome
+
+Provide recorded findings
+
+Make final review decision
+
+Not involved
+
+Correct task content
+
+Sole editor
+
+Never
+
+Never
+
+Never
+
+Final difficulty run
+
+Respond to returns
+
+Not involved
+
+Not involved
+
+Runs after QC pass
+
+
+Final checklist for authors
+The task is original and fits the assigned domain and specialty.
+The prompt defines the professional objective, output, evidence rules, and all material constraints.
+The evidence is sufficient, verified, accessible, nonconfidential, and free of answer leakage.
+The reference solution answers every requested part and supports material claims and calculations.
+The rubric is atomic, weighted by importance, calibrated to the task, and fair to valid alternatives.
+The prompt, evidence, reference solution, and rubric agree with one another and belong to the same current revision.
+Every revision was made by the original author and returned through the review queue.
+The current revision passed double-blind review, QC, and the final difficulty check before acceptance.
+All material claims, sources, and calculations have been independently verified by the author.
+Getting help
+Contact the project team with the task ID, current stage, action attempted, and exact error or finding. Include a screenshot when useful without exposing confidential or restricted material. For content disputes, include the source or calculation that supports the question.
+
+
+Confidential  |   Project Millie Expert and Reviewer Instructions
+
+
+
+

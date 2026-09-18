@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Millie Task Autofill",
+  "version": "1.0.0",
+  "description": "Fills Project Millie task workspace forms on experts.afterquery.com from a JSON file you provide.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://experts.afterquery.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Millie Task Autofill"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://experts.afterquery.com/projects/millie/tasks/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
