@@ -30,7 +30,7 @@ Vessel: V-204, Propane Product Surge Drum. Horizontal, ASME Section VIII Divisio
 
 Installed relief devices:
 - PSV-204A: conventional spring-loaded pressure relief valve, propane vapor service. Set pressure: 250 psig (at MAWP). ASME-certified effective coefficient of discharge, Kd: 0.975. Nameplate effective orifice area matches API 526 standard designation M (3.60 in²). Discharges to the terminal's low-pressure atmospheric relief header; the relief header hydraulics study confirms built-up backpressure at this device's rated flow is low enough that no backpressure correction is required (Kb = 1.0). No rupture disk is installed upstream or in combination with PSV-204A (Kc = 1.0).
-- TSV-204B: thermal relief valve, 3/4 in x 1 in, liquid propane service only (protects the block valve segment between the vessel outlet isolation valve and the downstream check valve against liquid thermal expansion when isolated). Set pressure: 275 psig. Manufacturer-rated capacity: 8.2 gpm liquid propane.
+- TSV-204B: thermal relief valve, 3/4 in x 1 in, installed on the block valve segment between the vessel outlet isolation valve and the downstream check valve. Set pressure: 275 psig. Manufacturer-rated capacity: 8.2 gpm.
 
 **Exhibit B: PHA revalidation basis for the fire case on V-204 (fictional, current revalidation)**
 
@@ -51,7 +51,7 @@ At the fire-case relieving conditions for V-204:
 
 ### Reference solution
 
-**1. Required fire-case relieving rate.** Per API Standard 521, Sixth Edition (January 2014), Section 4.4.13.2 (Fire Contingency), the heat-input equation for a vessel exposed to pool fire with adequate drainage and firefighting equipment is Q = 21,000 x F x A_ws^0.82, where A_ws is the wetted surface area in ft². With F = 1.0 (bare vessel, per Exhibit B) and A_ws = 1,850 ft²:
+**1. Required fire-case relieving rate.** Per API Standard 521, Sixth Edition (January 2014), Section 4.4.13.2.4, the heat-input equation for a vessel exposed to pool fire with adequate drainage and firefighting equipment is Q = 21,000 x F x A_ws^0.82, where A_ws is the wetted surface area in ft². With F = 1.0 (bare vessel, per Exhibit B) and A_ws = 1,850 ft²:
 
 A_ws^0.82 = 1,850^0.82 is approximately 477.7.
 Q = 21,000 x 1.0 x 477.7 is approximately 10,030,000 Btu/hr (about 10.0 x 10^6 Btu/hr).
@@ -60,7 +60,7 @@ The required relieving mass rate follows from W = Q / L, using the given latent 
 
 W = 10,030,000 / 85 is approximately 118,000 lb/hr.
 
-**2. Required effective orifice area.** The API 520 Part I critical-flow sizing equation for vapor/gas service is:
+**2. Required effective orifice area.** Per API Standard 520 Part I, Tenth Edition (October 2020), Section 5.6.3, the critical-flow sizing equation for vapor/gas service is:
 
 A = W / (C x Kd x P1 x Kb x Kc) x sqrt(T x Z / M)
 
@@ -68,7 +68,7 @@ The coefficient C is a function of the ideal-gas specific heat ratio k: C = 520 
 
 (k+1)/(k-1) = 2.13/0.13, approximately 16.38. (2/(k+1))^16.38 = (0.9390)^16.38 is approximately 0.356. k x 0.356 is approximately 0.403. sqrt(0.403) is approximately 0.635. C = 520 x 0.635 is approximately 330.
 
-The relieving pressure is set by the fire-case accumulation. Per ASME Section VIII Division 1 UG-125 and API 521, the maximum accumulation for fire or other unexpected external heat source exposure is 21% above MAWP (that is, 121% of MAWP), regardless of the number of relief devices installed - this is a materially higher accumulation than the 110% (10%) basis that applies to a single device on a non-fire contingency, and using the non-fire basis here would understate the relieving pressure and overstate the required area. With MAWP = Pset = 250 psig:
+The relieving pressure is set by the fire-case accumulation. Per ASME BPVC Section VIII Division 1 (2023 Edition), UG-125, and API Standard 521, Sixth Edition (January 2014), the maximum accumulation for fire or other unexpected external heat source exposure is 21% above MAWP (that is, 121% of MAWP), regardless of the number of relief devices installed - this is a materially higher accumulation than the 110% (10%) basis that applies to a single device on a non-fire contingency, and using the non-fire basis here would understate the relieving pressure and overstate the required area. With MAWP = Pset = 250 psig:
 
 P1 (gauge) = 250 x 1.21 = 302.5 psig. P1 (absolute) = 302.5 + 14.7 = 317.2 psia.
 
@@ -78,7 +78,7 @@ Denominator: 330 x 0.975 x 317.2 x 1.0 x 1.0 is approximately 102,053.
 sqrt(T x Z / M) = sqrt(605 x 0.85 / 44.1) = sqrt(11.666) is approximately 3.415.
 A = (118,000 / 102,053) x 3.415 is approximately 3.95 in².
 
-**3. Adequacy of PSV-204A.** The API 526 standard orifice designations bracketing this requirement are M (3.60 in²) and N (4.34 in²). The required area of approximately 3.95 in² exceeds the certified area of the installed M orifice (3.60 in²), so PSV-204A is undersized for the revised fire case. The smallest standard API 526 orifice designation that meets the requirement is N (4.34 in²); the correct practice is to select the next standard size that is at or above the required area, not the nearest size in either direction.
+**3. Adequacy of PSV-204A.** Per API Standard 526, Seventh Edition (September 2017), Table 1, the standard orifice designations bracketing this requirement are M (3.60 in²) and N (4.34 in²). The required area of approximately 3.95 in² exceeds the certified area of the installed M orifice (3.60 in²), so PSV-204A is undersized for the revised fire case. The smallest standard API 526 orifice designation that meets the requirement is N (4.34 in²); the correct practice is to select the next standard size that is at or above the required area, not the nearest size in either direction.
 
 **4. Credit from TSV-204B, and the total credited fire-case capacity.** TSV-204B is a liquid-service thermal relief valve sized only for the liquid thermal expansion contingency that arises when its piping segment is blocked in; per Exhibit A, it is rated only for 8.2 gpm of liquid propane and is not a vapor-service device. As a matter of established process safety engineering practice, a device is evaluated and credited against the specific overpressure contingency and fluid phase it is designed and rated for; TSV-204B was never designed, rated, or tested for vapor generation from external fire, so it provides no basis for crediting any vapor relief capacity toward the fire case, regardless of its liquid-service rating. TSV-204B's 8.2 gpm liquid rating therefore contributes no credit toward the fire-case vapor relief requirement.
 
