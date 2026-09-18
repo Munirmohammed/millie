@@ -104,6 +104,7 @@ Total credited fire-case vapor relief capacity for V-204 (PSV-204A plus TSV-204B
 - **+8** Correctly derives or applies the API 520 coefficient C for k = 1.13, arriving at C of approximately 330 (accept 325 to 335).
 - **+8** Uses the fire-case accumulation of 21% above MAWP (121% of MAWP) per ASME Section VIII UG-125 / API 521 to set the relieving pressure at approximately 317 psia, rather than the 110% single-device non-fire basis.
 - **+7** Computes the required effective orifice area of approximately 3.95 in² (accept 3.8 to 4.1 in²) using the API 520 sizing equation with the given Kd, Kb, and Kc.
+- **+5** Names the specific standard, edition, and provision behind each material step, rather than citing standards generically (for example: API Standard 521, Sixth Edition, Section 4.4.13.2.4, for the heat-input equation; ASME BPVC Section VIII Division 1, 2023 Edition, UG-125, for the fire-case accumulation; API Standard 520 Part I, Tenth Edition, Section 5.6.3, for the sizing equation; API Standard 526, Seventh Edition, Table 1, for the standard orifice areas).
 
 *Analytical Reasoning*
 - **+9** Compares the computed required area to the API 526 standard orifice table, correctly concludes the installed M orifice (3.60 in²) is undersized, and identifies N (4.34 in²) as the smallest adequate standard designation, rather than rounding to the nearest size.

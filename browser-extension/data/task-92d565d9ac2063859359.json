@@ -68,7 +68,7 @@
                                          {
                                              "key":  "tsv204b.rated_capacity",
                                              "value":  "8.2",
-                                             "unit":  "gpm liquid propane",
+                                             "unit":  "gpm",
                                              "provenance":  "Exhibit A"
                                          },
                                          {
@@ -361,6 +361,12 @@
                                         "capabilityTag":  "engineering-calculation",
                                         "observableRequirement":  "Computes the required effective orifice area of approximately 3.95 in^2 (accept 3.8 to 4.1 in^2) using the API 520 sizing equation with the given Kd, Kb, and Kc.",
                                         "dependsOn":  "required-relieving-rate, api520-coefficient-c, fire-case-accumulation-basis"
+                                    },
+                                    {
+                                        "stableId":  "names-standard-edition-provision",
+                                        "weight":  "5",
+                                        "capabilityTag":  "standards-citation",
+                                        "observableRequirement":  "Names the specific standard, edition, and provision behind each material step, rather than citing standards generically (for example: API Standard 521, Sixth Edition, Section 4.4.13.2.4, for the heat-input equation; ASME BPVC Section VIII Division 1, 2023 Edition, UG-125, for the fire-case accumulation; API Standard 520 Part I, Tenth Edition, Section 5.6.3, for the sizing equation; API Standard 526, Seventh Edition, Table 1, for the standard orifice areas)."
                                     },
                                     {
                                         "stableId":  "orifice-adequacy-conclusion",
