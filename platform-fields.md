@@ -51,7 +51,7 @@ Approximately 45-60 minutes for a qualified process or mechanical engineer famil
 
 **Why this needs professional synthesis**
 ```
-The respondent has to chain three real standards together the way a relief system review actually works. They must apply the API 521 fire-case heat-input equation with the correct environment factor, convert that to a required relieving rate, then apply the API 520 sizing equation with a correctly derived coefficient and the correct fire-case accumulation basis (21% above MAWP, not the 10% non-fire single-device basis most people default to), then compare the result to the real API 526 standard orifice table using the rounding-up convention rather than nearest-size. Independently of that whole chain, they also have to recognize that a second installed relief device on the vessel serves a completely different overpressure contingency and cannot be credited toward the fire case, without being told that directly.
+The respondent has to chain three real standards together the way a relief system review actually works. They must apply the API 521 fire-case heat-input equation with the correct environment factor, convert that to a required relieving rate, then apply the API 520 sizing equation with a correctly derived coefficient and the correct fire-case accumulation basis, which differs from the more commonly known non-fire basis, then compare the result to the real API 526 standard orifice table using the rounding-up convention rather than nearest-size. Independently of that whole chain, they also have to recognize that a second installed relief device on the vessel serves a completely different overpressure contingency and cannot be credited toward the fire case, without being told that directly.
 ```
 
 ## Prompt and deliverable
@@ -81,7 +81,7 @@ Show the arithmetic and cite the governing provision behind every material step,
 ```
 The response must, at minimum:
 - Show the API 521 fire-case heat-input calculation (Q) and the resulting required relieving mass rate (W), with the environment factor and wetted area used stated explicitly.
-- Show the API 520 sizing calculation for the required effective orifice area, including the derived coefficient C and the relieving pressure used, with the fire-case accumulation basis (21% above MAWP) stated and distinguished from the non-fire basis.
+- Show the API 520 sizing calculation for the required effective orifice area, including the derived coefficient C and the relieving pressure used, with the accumulation basis that supports that relieving pressure stated.
 - State a clear conclusion on whether the installed PSV-204A orifice is adequate, and if not, name the smallest standard API 526 orifice designation that is.
 - Separately and explicitly state whether TSV-204B's capacity may be credited toward the fire-case requirement, with the reasoning for that conclusion.
 - End with a specific, concrete recommendation for what should happen before the next turnaround.
