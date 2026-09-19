@@ -8,7 +8,7 @@
 
 **Recipient / work product.** Write a relief system adequacy memo to the site's Process Safety Manager (two to three pages is sufficient) that reaches a supported conclusion on whether the currently installed pressure relief valve on V-204 is adequately sized for the revised fire case, and what should happen before the next turnaround if it is not.
 
-**Permitted resources.** Use the exhibits below for every facility- and equipment-specific figure (vessel, valve, and process-simulation data); no external research is needed or expected to obtain any of those. Separately, you are expected to know and apply, from your own professional knowledge and without needing to look them up, the general industry reference values and methodology in API Standard 520 (Sizing, Selection, and Installation of Pressure-Relieving Devices), API Standard 521 (Pressure-Relieving and Depressuring Systems), API Standard 526 (Flanged Steel Pressure Relief Valves, including its standard orifice designation areas), and ASME Boiler and Pressure Vessel Code Section VIII, Division 1. Cite the specific provision behind each material step where a specific provision exists and is available to you; where you rely on a standard's general methodology rather than a single numbered clause, name the standard and edition you are relying on.
+**Permitted resources.** Use the exhibits below for every facility- and equipment-specific figure (vessel, valve, and process-simulation data); no external research is needed or expected to obtain any of those. Separately, you are expected to know and apply, from your own professional knowledge and without needing to look them up, the general industry reference values and methodology in API Standard 520 (Sizing, Selection, and Installation of Pressure-Relieving Devices), API Standard 521 (Pressure-Relieving and Depressuring Systems), API Standard 526 (Flanged Steel Pressure Relief Valves, including its standard orifice designation areas), and ASME Boiler and Pressure Vessel Code Section VIII, Division 1. Name the specific standard each material step relies on. Citing a more precise provision, section, or edition is a plus but is not required, since exact clause numbers and editions are not disclosed in the supplied exhibits.
 
 **Assumptions.** All pressures are gauge unless stated as absolute (psia). Atmospheric pressure is 14.7 psia. Treat every figure in the exhibits as accurate and final.
 
@@ -20,7 +20,7 @@
 4. Independent of the PSV-204A sizing analysis, determine the total fire-case vapor relief capacity that may be credited to V-204's installed relief devices as a group (Exhibit A), accounting for each device's rated service, and identify which device or devices that credited total comes from.
 5. Recommend what should be done about V-204's overpressure protection given your findings, and identify what would need to happen before the next turnaround.
 
-Show the arithmetic behind every material step, not just the final numbers, and name the standard, edition, and specific provision (where one exists) that supports each step.
+Show the arithmetic behind every material step, not just the final numbers, and name the specific standard (API 520, API 521, API 526, or ASME Section VIII) that supports each step.
 
 ### Evidence
 
@@ -104,7 +104,7 @@ Total credited fire-case vapor relief capacity for V-204 (PSV-204A plus TSV-204B
 - **+8** Correctly derives or applies the API 520 coefficient C for k = 1.13, arriving at C of approximately 330 (accept 325 to 335).
 - **+8** Uses the fire-case accumulation of 21% above MAWP (121% of MAWP) per ASME Section VIII UG-125 / API 521 to set the relieving pressure at approximately 317 psia, rather than the 110% single-device non-fire basis.
 - **+7** Computes the required effective orifice area of approximately 3.95 in² (accept 3.8 to 4.1 in²) using the API 520 sizing equation with the given Kd, Kb, and Kc.
-- **+5** Names the specific standard, edition, and provision behind each material step, rather than citing standards generically (for example: API Standard 521, Sixth Edition, Section 4.4.13.2.4, for the heat-input equation; ASME BPVC Section VIII Division 1, 2023 Edition, UG-125, for the fire-case accumulation; API Standard 520 Part I, Tenth Edition, Section 5.6.3, for the sizing equation; API Standard 526, Seventh Edition, Table 1, for the standard orifice areas).
+- **+5** Names the specific standard (API 521, API 520, API 526, or ASME Section VIII) that supports each material step, rather than leaving the authority for a calculation unstated. Naming a more precise provision, section, or edition is a plus but is not required, and no credit should be withheld for a missing or different edition/clause number than the reference solution's - those specifics are not disclosed anywhere in the respondent-visible materials, and the task states no external research is expected; the edition and clause numbers in the reference solution are for the grader's own verification, not a respondent-facing requirement.
 
 *Analytical Reasoning*
 - **+9** Compares the computed required area to the API 526 standard orifice table, correctly concludes the installed M orifice (3.60 in²) is undersized, and identifies N (4.34 in²) as the smallest adequate standard designation, rather than rounding to the nearest size.
