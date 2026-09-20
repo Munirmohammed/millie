@@ -100,8 +100,15 @@ function findFieldByLabel(text, root = document) {
 // `label` may be a string or an array of candidate labels (tried in order) -
 // the platform has been observed to rename fields between versions (e.g.
 // "Workings" -> "Reasoning process"), so a short alias list survives that.
+//
+// A value of undefined/null means "not specified, leave whatever is there
+// alone." An explicit empty string '' means "clear this field" and is
+// actively written - the platform has been observed to silently default a
+// never-filled field (e.g. a rubric criterion's "Depends on") to a bad value
+// such as the row's own id, which nothing then overwrites unless we
+// deliberately blank it.
 function fillByLabel(label, value, log, prefix = '') {
-  if (value === undefined || value === null || value === '') return;
+  if (value === undefined || value === null) return;
   const candidates = Array.isArray(label) ? label : [label];
   const primary = candidates[0];
   const tag = prefix ? `${prefix} - ${primary}` : primary;
@@ -172,9 +179,10 @@ async function ensureRepeatCount(buttonText, captionPrefix, neededCount) {
   return count;
 }
 
+// See fillByLabel's comment: undefined/null is "leave alone," '' is "clear this field."
 function fillContainerFields(container, fieldMap, log, prefix) {
   for (const [label, value] of Object.entries(fieldMap)) {
-    if (value === undefined || value === null || value === '') continue;
+    if (value === undefined || value === null) continue;
     const el = findFieldByLabel(label, container);
     const tag = `${prefix} - ${label}`;
     if (!el) {
