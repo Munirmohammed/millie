@@ -31,7 +31,7 @@ United States (API 520/521/526, ASME Section VIII Division 1)
 
 **As-of date** (optional)
 ```
-Current PHA revalidation; next scheduled turnaround approximately 18 months out.
+Current PHA revalidation; the fireproof insulation will not be restored before the next scheduled turnaround.
 ```
 
 **Allowed tools and sources**
