@@ -2,18 +2,18 @@
     "workspace":  {
                       "professionalRole":  "Process engineer, Meridian Gas Processing, LLC (Ridgeline Fractionation Terminal)",
                       "recipient":  "The site\u0027s Process Safety Manager",
-                      "decisionToMake":  "Whether the currently installed pressure relief valve on vessel V-204 (the propane product surge drum) is adequately sized for the fire case now that its fireproof insulation has degraded beyond repair, and what should happen before the next turnaround if it is not.",
-                      "deliverable":  "A relief system adequacy memo to the Process Safety Manager that reaches a supported conclusion on whether PSV-204A is adequately sized for the revised fire case, whether the secondary thermal relief valve TSV-204B may be credited toward that requirement, and what should happen before the next turnaround if PSV-204A is inadequate.",
+                      "decisionToMake":  "Whether the currently installed pressure relief valve on vessel V-204 (the propane product surge drum) is adequately sized for the governing overpressure contingency, now that its fireproof insulation has degraded beyond repair and a blocked-outlet contingency has also been flagged for evaluation, and what should happen before the next turnaround if it is not.",
+                      "deliverable":  "A relief system adequacy memo to the Process Safety Manager that determines which of two overpressure contingencies (fire case or blocked outlet) governs V-204\u0027s required relief capacity, reaches a supported conclusion on whether PSV-204A is adequately sized for that governing contingency, whether the secondary thermal relief valve TSV-204B may be credited toward that requirement, and what should happen before the next turnaround if PSV-204A is inadequate.",
                       "jurisdiction":  "United States (API 520/521/526, ASME Section VIII Division 1)",
                       "asOfDate":  "Current PHA revalidation; the fireproof insulation will not be restored before the next scheduled turnaround.",
                       "allowedToolsAndSources":  "Use the exhibits for every facility- and equipment-specific figure (vessel, valve, and process-simulation data); no external research is needed or expected to obtain any of those. Separately, respondent is expected to know and apply, from their own professional knowledge and without needing to look them up, the general industry reference values and methodology in API 520, API 521, API 526 (including its standard orifice designation areas), and ASME Section VIII Division 1. Name the specific standard each material step relies on. Citing a more precise provision, section, or edition is a plus but is not required, since exact clause numbers and editions are not disclosed in the supplied exhibits.",
                       "webSearchBoundary":  "Supplied evidence only - no web search",
                       "expectedExpertEffort":  "Approximately 45-60 minutes for a qualified process or mechanical engineer familiar with API 520/521 relief valve sizing.",
-                      "whyProfessionalSynthesis":  "The respondent has to chain four real steps together the way a relief system review actually works. They must first derive the vessel\u0027s wetted surface area themselves from its geometry and liquid level, using circular-segment mensuration rather than being handed the figure, then apply the API 521 fire-case heat-input equation with the correct environment factor, convert that to a required relieving rate, then apply the API 520 sizing equation with a correctly derived coefficient and the correct fire-case accumulation basis, which differs from the more commonly known non-fire basis, then compare the result to the real API 526 standard orifice table using the rounding-up convention rather than nearest-size. Independently of that whole chain, they also have to recognize that a second installed relief device on the vessel serves a completely different overpressure contingency and cannot be credited toward the fire case, without being told that directly."
+                      "whyProfessionalSynthesis":  "The respondent has to chain several real steps together the way a relief system review actually works. They must first derive the vessel\u0027s wetted surface area themselves from its geometry and liquid level, using circular-segment mensuration rather than being handed the figure, then apply the API 521 fire-case heat-input equation with the correct environment factor and convert that to a required relieving rate. They must also independently size a second, competing contingency (blocked outlet) using a materially different accumulation basis, and correctly determine which of the two contingencies actually governs the design, rather than assuming the fire case governs just because it was presented first or requires more calculation. Only then do they apply the API 520 sizing equation to the governing case and compare the result to the real API 526 standard orifice table using the rounding-up convention rather than nearest-size. Independently of that whole chain, they also have to recognize that a second installed relief device on the vessel serves a completely different overpressure contingency and cannot be credited toward either sizing case, without being told that directly."
                   },
     "promptAndDeliverable":  {
-                                 "prompt":  "You are a process engineer at Meridian Gas Processing, LLC, at its Ridgeline Fractionation Terminal. A process hazard analysis (PHA) revalidation just found that fireproof insulation on vessel V-204, the propane product surge drum, has degraded beyond repair and will not be replaced before the next scheduled turnaround. The PHA team recalculated the fire-case heat input on the assumption that the vessel must now be treated as bare (uninsulated) and has asked you to confirm whether the vessel\u0027s existing overpressure protection remains adequate.\n\nWrite a relief system adequacy memo to the site\u0027s Process Safety Manager (two to three pages is sufficient) that reaches a supported conclusion on whether the currently installed pressure relief valve on V-204 is adequately sized for the revised fire case, and what should happen before the next turnaround if it is not.\n\nUse the exhibits supplied as evidence for every facility- and equipment-specific figure; no external research is needed or expected to obtain any of those. Separately, you are expected to know and apply, from your own professional knowledge and without needing to look them up, the general industry reference values and methodology in API Standard 520, API Standard 521, API Standard 526 (including its standard orifice designation areas), and ASME Boiler and Pressure Vessel Code Section VIII, Division 1. Name the specific standard each material step relies on. Citing a more precise provision, section, or edition is a plus but is not required, since exact clause numbers and editions are not disclosed in the supplied exhibits.\n\nAll pressures are gauge unless stated as absolute (psia). Atmospheric pressure is 14.7 psia. Treat every figure in the exhibits as accurate and final.\n\nSpecifically:\n\n1. Using the vessel geometry and liquid level in Exhibit B, determine the wetted surface area of V-204 exposed to the fire, then determine the required fire-case relieving vapor rate using the API 521 heat-input methodology. Show each step: the wetted-area geometry, the heat-input calculation, and the resulting mass relieving rate.\n2. Using the API 520 Part I vapor/gas sizing equation, determine the required effective relief orifice area for the fire case. Derive the API 520 coefficient C from the given specific heat ratio, and state the relieving pressure you use and the accumulation basis that supports it.\n3. Compare the required effective orifice area to the standard API 526 orifice designation currently installed on PSV-204A (Exhibit A) and state whether PSV-204A remains adequate for the revised fire case. If it is not adequate, identify the smallest standard API 526 orifice designation that would be.\n4. Independent of the PSV-204A sizing analysis, determine the total fire-case vapor relief capacity that may be credited to V-204\u0027s installed relief devices as a group (Exhibit A), accounting for each device\u0027s rated service, and identify which device or devices that credited total comes from.\n5. Recommend what should be done about V-204\u0027s overpressure protection given your findings, and identify what would need to happen before the next turnaround.\n\nShow the arithmetic behind every material step, not just the final numbers, and name the specific standard (API 520, API 521, API 526, or ASME Section VIII) that supports each step.",
-                                 "deliverableContract":  "The response must, at minimum:\n- Show the wetted-area geometry derivation, the API 521 fire-case heat-input calculation (Q), and the resulting required relieving mass rate (W), with the environment factor used stated explicitly.\n- Show the API 520 sizing calculation for the required effective orifice area, including the derived coefficient C and the relieving pressure used, with the accumulation basis that supports that relieving pressure stated.\n- State a clear conclusion on whether the installed PSV-204A orifice is adequate, and if not, name the smallest standard API 526 orifice designation that is.\n- Separately state the total credited fire-case vapor relief capacity from the vessel\u0027s installed relief devices as a group, identifying which device or devices it comes from and the reasoning for that conclusion.\n- End with a specific, concrete recommendation for what should happen before the next turnaround.\n- Length target: roughly 2-3 pages; format: memo addressed to the Process Safety Manager with the calculation, the orifice comparison, and the device-crediting conclusion as separately identifiable sections."
+                                 "prompt":  "You are a process engineer at Meridian Gas Processing, LLC, at its Ridgeline Fractionation Terminal. A process hazard analysis (PHA) revalidation just found that fireproof insulation on vessel V-204, the propane product surge drum, has degraded beyond repair and will not be replaced before the next scheduled turnaround. The PHA team recalculated the fire-case basis on the assumption that the vessel must now be treated as bare (uninsulated), and separately flagged a blocked-outlet contingency on the vessel that has not previously been evaluated against the current relief device. You have been asked to confirm whether the vessel\u0027s existing overpressure protection remains adequate against the governing contingency.\n\nWrite a relief system adequacy memo to the site\u0027s Process Safety Manager (two to three pages is sufficient) that reaches a supported conclusion on whether the currently installed pressure relief valve on V-204 is adequately sized for the governing overpressure contingency, and what should happen before the next turnaround if it is not.\n\nUse the exhibits supplied as evidence for every facility- and equipment-specific figure; no external research is needed or expected to obtain any of those. Separately, you are expected to know and apply, from your own professional knowledge and without needing to look them up, the general industry reference values and methodology in API Standard 520, API Standard 521, API Standard 526 (including its standard orifice designation areas), and ASME Boiler and Pressure Vessel Code Section VIII, Division 1. Name the specific standard each material step relies on. Citing a more precise provision, section, or edition is a plus but is not required, since exact clause numbers and editions are not disclosed in the supplied exhibits.\n\nAll pressures are gauge unless stated as absolute (psia). Atmospheric pressure is 14.7 psia. Treat every figure in the exhibits as accurate and final.\n\nSpecifically:\n\n1. Using the vessel geometry and liquid level in Exhibit B, determine the wetted surface area of V-204 exposed to the fire, then determine the required fire-case relieving vapor rate using the API 521 heat-input methodology. Show each step: the wetted-area geometry, the heat-input calculation, and the resulting mass relieving rate.\n2. Using the API 520 Part I vapor/gas sizing equation, determine the required effective relief orifice area for the fire case. Derive the API 520 coefficient C from the given specific heat ratio, and state the relieving pressure you use and the accumulation basis that supports it.\n3. Using the blocked-outlet contingency data in Exhibit D, determine the required effective relief orifice area for that contingency, using the accumulation basis appropriate to a non-fire, single-device contingency. State which of the two contingencies (fire case or blocked outlet) governs the required relief orifice area for V-204, and why.\n4. Compare the governing contingency\u0027s required effective orifice area to the standard API 526 orifice designation currently installed on PSV-204A (Exhibit A) and state whether PSV-204A remains adequate. If it is not adequate, identify the smallest standard API 526 orifice designation that would be.\n5. Independent of the PSV-204A sizing analysis, determine the total relief vapor capacity, for the governing contingency, that may be credited to V-204\u0027s installed relief devices as a group (Exhibit A), accounting for each device\u0027s rated service, and identify which device or devices that credited total comes from.\n6. Recommend what should be done about V-204\u0027s overpressure protection given your findings, and identify what would need to happen before the next turnaround.\n\nShow the arithmetic behind every material step, not just the final numbers, and name the specific standard (API 520, API 521, API 526, or ASME Section VIII) that supports each step.",
+                                 "deliverableContract":  "The response must, at minimum:\n- Show the wetted-area geometry derivation, the API 521 fire-case heat-input calculation (Q), and the resulting required relieving mass rate (W), with the environment factor used stated explicitly.\n- Show the API 520 sizing calculation for the required fire-case effective orifice area, including the derived coefficient C and the relieving pressure used, with the accumulation basis that supports that relieving pressure stated.\n- Show the API 520 sizing calculation for the blocked-outlet contingency\u0027s required effective orifice area, with its own accumulation basis stated, and explicitly identify which contingency governs.\n- State a clear conclusion on whether the installed PSV-204A orifice is adequate for the governing contingency, and if not, name the smallest standard API 526 orifice designation that is.\n- Separately state the total credited vapor relief capacity for the governing contingency from the vessel\u0027s installed relief devices as a group, identifying which device or devices it comes from and the reasoning for that conclusion.\n- End with a specific, concrete recommendation for what should happen before the next turnaround.\n- Length target: roughly 2-3 pages; format: memo addressed to the Process Safety Manager with the calculations, the governing-case determination, the orifice comparison, and the device-crediting conclusion as separately identifiable sections."
                              },
     "facts":  {
                   "canonicalFacts":  [
@@ -190,6 +190,36 @@
                                              "value":  "1829",
                                              "unit":  "ft^2",
                                              "provenance":  "Derivation wetted_area"
+                                         },
+                                         {
+                                             "key":  "blocked.max_discharge_rate",
+                                             "value":  "42000",
+                                             "unit":  "lb/hr propane vapor",
+                                             "provenance":  "Exhibit D"
+                                         },
+                                         {
+                                             "key":  "blocked.relieving_temp_R",
+                                             "value":  "560",
+                                             "unit":  "degrees Rankine",
+                                             "provenance":  "Exhibit D"
+                                         },
+                                         {
+                                             "key":  "blocked.Z",
+                                             "value":  "0.92",
+                                             "unit":  "dimensionless",
+                                             "provenance":  "Exhibit D"
+                                         },
+                                         {
+                                             "key":  "standard.non_fire_single_device_accumulation_pct",
+                                             "value":  "10",
+                                             "unit":  "percent above MAWP",
+                                             "provenance":  "ASME Section VIII UG-125"
+                                         },
+                                         {
+                                             "key":  "derived.blocked_relieving_pressure_p1",
+                                             "value":  "289.7",
+                                             "unit":  "psia",
+                                             "provenance":  "Derivation blocked_relieving_pressure"
                                          }
                                      ],
                   "derivations":  [
@@ -248,6 +278,22 @@
                                           "result":  "107600",
                                           "rounding":  "3 sig figs",
                                           "tolerance":  "3 percent"
+                                      },
+                                      {
+                                          "id":  "blocked_relieving_pressure",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "vessel.mawp, standard.non_fire_single_device_accumulation_pct, standard.atmospheric_pressure",
+                                          "result":  "289.7",
+                                          "rounding":  "1 decimal",
+                                          "tolerance":  "0.5 percent"
+                                      },
+                                      {
+                                          "id":  "blocked_outlet_required_area",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "blocked.max_discharge_rate, derived.api520_coefficient_c, derived.blocked_relieving_pressure_p1, psv204a.kd, psv204a.kb, psv204a.kc, blocked.relieving_temp_R, blocked.Z, sim.molecular_weight",
+                                          "result":  "1.54",
+                                          "rounding":  "2 decimals",
+                                          "tolerance":  "5 percent"
                                       }
                                   ],
                   "sources":  [
@@ -343,16 +389,27 @@
                                       "claimLocators":  "Process simulation physical property basis, Exhibit C",
                                       "licenseRights":  "Authored for this task by the task expert; fictional facility data, no third-party rights implicated.",
                                       "contentHash":  "1650ad91319a8b4c794d50b26d39b09b2fcfd62096c20c180db6e3d9f2555db9"
+                                  },
+                                  {
+                                      "id":  "exhibit-d",
+                                      "title":  "Exhibit D, blocked-outlet contingency basis",
+                                      "authenticity":  "Synthetic",
+                                      "origin":  "Expert Supplied",
+                                      "delivery":  "Provided to Agent",
+                                      "excerpt":  "V-204\u0027s downstream outlet control valve (FV-204) can fail closed while the upstream feed compressor (K-204) continues to run, since K-204\u0027s control scheme does not automatically trip the machine on high V-204 level alone. K-204\u0027s maximum continued discharge rate of propane vapor into V-204 under this contingency, per the compressor\u0027s performance curve at V-204\u0027s relief set pressure, is 42,000 lb/hr. Physical properties at the blocked-outlet contingency\u0027s relieving conditions: relieving temperature 560 degrees Rankine (100 degrees Fahrenheit); compressibility factor (Z) 0.92. Molecular weight and ideal-gas specific heat ratio are the same as Exhibit C, since it is the same fluid.",
+                                      "claimLocators":  "Blocked-outlet contingency basis, Exhibit D",
+                                      "licenseRights":  "Authored for this task by the task expert; fictional facility data, no third-party rights implicated.",
+                                      "contentHash":  "8ff97b9873821254f2f9542957c7f63106d747fca5eb357bd7c5d69e525a2ea1"
                                   }
                               ]
               },
     "reference":  {
-                      "answer":  "1. The wetted area of V-204\u0027s cylindrical shell is approximately 1,829 ft^2, computed from the vessel\u0027s 13.0 ft diameter, 75.0 ft shell length, and 65 percent liquid level using circular-segment geometry. The resulting required fire-case relieving vapor rate is approximately 116,900 lb/hr, derived from a heat input of approximately 9.93 x 10^6 Btu/hr.\n2. The required effective relief orifice area is approximately 3.91 in^2, using a derived API 520 coefficient C of approximately 330 and a fire-case relieving pressure of approximately 317.2 psia (21 percent accumulation above the 250 psig MAWP).\n3. PSV-204A\u0027s installed API 526 M orifice (3.60 in^2) is undersized; the smallest adequate standard designation is N (4.34 in^2).\n4. TSV-204B\u0027s rating (8.2 gpm) is a liquid volumetric flow rate, not the vapor mass flow rate the fire case requires, and Exhibit A gives no valid basis to convert one into the other; TSV-204B therefore has no established vapor relieving capacity to credit at all. Total credited fire-case capacity is PSV-204A\u0027s alone, approximately 107,600 lb/hr, about 92 percent of the 116,900 lb/hr required.\n5. The approximately 9,300 lb/hr shortfall must be closed before the next turnaround, since Exhibit B states the fireproofing will not be restored before then. Either upsizing PSV-204A to at least an API 526 N orifice or adding a properly sized second vapor relief device closes the gap; TSV-204B should remain in service for its liquid thermal-relief function only and should not be represented as contributing to the fire-case vapor relief capacity.",
-                      "workings":  "Wetted area geometry: r = 13.0/2 = 6.5 ft. h = 0.65 x 13.0 = 8.45 ft. Since h \u003e r, the wetted arc is the major segment. theta = arccos((h-r)/r) = arccos(0.300), approximately 1.266 radians. Wetted angle = 2*pi - 2*theta, approximately 3.751 radians. Wetted arc length = r x wetted angle = 6.5 x 3.751, approximately 24.38 ft. Wetted area (shell only) = 24.38 x 75.0, approximately 1,829 ft^2.\nHeat input: Q = 21,000 x F x A_ws^0.82 = 21,000 x 1.0 x 1829^0.82. 1829^0.82 is approximately 473.1, so Q is approximately 9,930,000 Btu/hr.\nRequired relieving rate: W = Q / L = 9,930,000 / 85 is approximately 116,900 lb/hr.\nCoefficient C: C = 520 x sqrt(k x (2/(k+1))^((k+1)/(k-1))). With k = 1.13: (k+1)/(k-1) is approximately 16.38; (2/2.13)^16.38 is approximately 0.356; k x 0.356 is approximately 0.403; sqrt(0.403) is approximately 0.635; C = 520 x 0.635 is approximately 330.\nRelieving pressure: fire-case accumulation is 21 percent above MAWP per ASME Section VIII UG-125 / API 521 (not the 10 percent non-fire single-device basis). P1 (gauge) = 250 x 1.21 = 302.5 psig; P1 (absolute) = 302.5 + 14.7 = 317.2 psia.\nRequired orifice area: A = W / (C x Kd x P1 x Kb x Kc) x sqrt(T x Z / M) = (116,900 / (330 x 0.975 x 317.2 x 1.0 x 1.0)) x sqrt(605 x 0.85 / 44.1) is approximately (116,900 / 102,053) x 3.415, approximately 3.91 in^2.\nOrifice comparison: API 526 M = 3.60 in^2 (too small), N = 4.34 in^2 (adequate); the correct practice is to select the next standard size at or above the required area, not the nearest size.\nDevice crediting: TSV-204B\u0027s rating in Exhibit A is 8.2 gpm, a liquid volumetric flow rate for its thermal-relief duty, not a vapor mass flow rate. The fire-case requirement (part 1) is a vapor mass flow rate in lb/hr. No liquid density, vapor-equivalent rating, or other conversion basis is given for TSV-204B, so there is no valid way to express its rating as a vapor lb/hr capacity. It therefore has no established vapor relieving capacity to credit toward the fire case, independent of whatever contingency it protects against.\nCredited capacity check: solving the API 520 equation for W using the installed M orifice (A = 3.60 in^2) and the same C, Kd, P1, Kb, Kc, T, Z, M gives W_credited = 3.60 x 102,053 / 3.415, approximately 107,600 lb/hr, against a required 116,900 lb/hr, a shortfall of about 9,300 lb/hr (about 92 percent of requirement met). This independently confirms the part 3 conclusion that PSV-204A is undersized.",
-                      "sourceLocators":  "API Standard 521, Sixth Edition (January 2014), Section 4.4.13.2.4, fire-case heat input equation\nASME BPVC Section VIII Division 1 (2023 Edition), UG-125\nAPI Standard 520 Part I, Tenth Edition (October 2020), Section 5.6.3, vapor/gas critical flow sizing\nAPI Standard 526, Seventh Edition (September 2017), Table 1, standard orifice designations\nExhibit A, V-204 relief device data sheet\nExhibit B, PHA revalidation basis\nExhibit C, process simulation physical property basis",
+                      "answer":  "1. The wetted area of V-204\u0027s cylindrical shell is approximately 1,829 ft^2, computed from the vessel\u0027s 13.0 ft diameter, 75.0 ft shell length, and 65 percent liquid level using circular-segment geometry. The resulting required fire-case relieving vapor rate is approximately 116,900 lb/hr, derived from a heat input of approximately 9.93 x 10^6 Btu/hr.\n2. The required effective relief orifice area for the fire case is approximately 3.91 in^2, using a derived API 520 coefficient C of approximately 330 and a fire-case relieving pressure of approximately 317.2 psia (21 percent accumulation above the 250 psig MAWP).\n3. The required effective relief orifice area for the blocked-outlet contingency is approximately 1.54 in^2, using the 10 percent non-fire single-device accumulation (relieving pressure approximately 289.7 psia). The fire case governs, since it requires a substantially larger orifice area (approximately 3.91 in^2 versus approximately 1.54 in^2).\n4. PSV-204A\u0027s installed API 526 M orifice (3.60 in^2) is undersized for the governing fire case; the smallest adequate standard designation is N (4.34 in^2).\n5. TSV-204B\u0027s rating (8.2 gpm) is a liquid volumetric flow rate, not the vapor mass flow rate the governing contingency requires, and Exhibit A gives no valid basis to convert one into the other; TSV-204B therefore has no established vapor relieving capacity to credit at all. Total credited capacity for the governing contingency is PSV-204A\u0027s alone, approximately 107,600 lb/hr, about 92 percent of the 116,900 lb/hr required.\n6. The approximately 9,300 lb/hr shortfall against the governing requirement must be closed before the next turnaround, since Exhibit B states the fireproofing will not be restored before then. Either upsizing PSV-204A to at least an API 526 N orifice or adding a properly sized second vapor relief device closes the gap; TSV-204B should remain in service for its liquid thermal-relief function only and should not be represented as contributing to the vapor relief capacity of V-204 for any contingency.",
+                      "workings":  "Wetted area geometry: r = 13.0/2 = 6.5 ft. h = 0.65 x 13.0 = 8.45 ft. Since h \u003e r, the wetted arc is the major segment. theta = arccos((h-r)/r) = arccos(0.300), approximately 1.266 radians. Wetted angle = 2*pi - 2*theta, approximately 3.751 radians. Wetted arc length = r x wetted angle = 6.5 x 3.751, approximately 24.38 ft. Wetted area (shell only) = 24.38 x 75.0, approximately 1,829 ft^2.\nFire-case heat input: Q = 21,000 x F x A_ws^0.82 = 21,000 x 1.0 x 1829^0.82. 1829^0.82 is approximately 473.1, so Q is approximately 9,930,000 Btu/hr.\nFire-case relieving rate: W_fire = Q / L = 9,930,000 / 85 is approximately 116,900 lb/hr.\nCoefficient C (shared by both contingencies, same fluid): C = 520 x sqrt(k x (2/(k+1))^((k+1)/(k-1))). With k = 1.13: (k+1)/(k-1) is approximately 16.38; (2/2.13)^16.38 is approximately 0.356; k x 0.356 is approximately 0.403; sqrt(0.403) is approximately 0.635; C = 520 x 0.635 is approximately 330.\nFire-case relieving pressure: 21 percent above MAWP per ASME Section VIII UG-125 / API 521 (fire, any number of devices). P1_fire (gauge) = 250 x 1.21 = 302.5 psig; P1_fire (absolute) = 302.5 + 14.7 = 317.2 psia.\nFire-case required area: A_fire = W_fire / (C x Kd x P1_fire x Kb x Kc) x sqrt(T x Z / M) = (116,900 / (330 x 0.975 x 317.2 x 1.0 x 1.0)) x sqrt(605 x 0.85 / 44.1) is approximately (116,900 / 102,053) x 3.415, approximately 3.91 in^2.\nBlocked-outlet relieving pressure: 10 percent above MAWP per ASME Section VIII UG-125 (single device, non-fire). P1_blocked (gauge) = 250 x 1.10 = 275 psig; P1_blocked (absolute) = 275 + 14.7 = 289.7 psia.\nBlocked-outlet required area: A_blocked = W_blocked / (C x Kd x P1_blocked x Kb x Kc) x sqrt(T_blocked x Z_blocked / M) = (42,000 / (330 x 0.975 x 289.7 x 1.0 x 1.0)) x sqrt(560 x 0.92 / 44.1) is approximately (42,000 / 93,211) x 3.418, approximately 1.54 in^2.\nGoverning case: A_fire (3.91 in^2) exceeds A_blocked (1.54 in^2), so the fire case governs.\nOrifice comparison: API 526 M = 3.60 in^2 (too small for the governing fire case), N = 4.34 in^2 (adequate); the correct practice is to select the next standard size at or above the required area, not the nearest size.\nDevice crediting: TSV-204B\u0027s rating in Exhibit A is 8.2 gpm, a liquid volumetric flow rate for its thermal-relief duty, not a vapor mass flow rate. The governing (fire-case) requirement is a vapor mass flow rate in lb/hr. No liquid density, vapor-equivalent rating, or other conversion basis is given for TSV-204B, so there is no valid way to express its rating as a vapor lb/hr capacity. It therefore has no established vapor relieving capacity to credit, independent of whatever contingency it protects against.\nCredited capacity check: solving the API 520 equation for W using the installed M orifice (A = 3.60 in^2) and the fire-case C, Kd, P1, Kb, Kc, T, Z, M gives W_credited = 3.60 x 102,053 / 3.415, approximately 107,600 lb/hr, against a required 116,900 lb/hr, a shortfall of about 9,300 lb/hr (about 92 percent of requirement met). This independently confirms the part 4 conclusion that PSV-204A is undersized.",
+                      "sourceLocators":  "API Standard 521, Sixth Edition (January 2014), Section 4.4.13.2.4, fire-case heat input equation\nASME BPVC Section VIII Division 1 (2023 Edition), UG-125 (both fire and non-fire single-device accumulation)\nAPI Standard 520 Part I, Tenth Edition (October 2020), Section 5.6.3, vapor/gas critical flow sizing\nAPI Standard 526, Seventh Edition (September 2017), Table 1, standard orifice designations\nExhibit A, V-204 relief device data sheet\nExhibit B, PHA revalidation basis (fire case)\nExhibit C, process simulation physical property basis (fire case)\nExhibit D, blocked-outlet contingency basis",
                       "acceptableAlternatives":  "Either remedial path (upsizing PSV-204A, or adding a second properly sized device), or an equivalent measure shown to close the approximately 9,300 lb/hr shortfall without relying on restoring fireproofing before the next turnaround, is an acceptable recommendation. A response that expresses the credited-capacity shortfall as a percentage of required capacity rather than, or in addition to, an absolute lb/hr figure is an acceptable equivalent presentation. Exhibit B states the wetted-area scope of this analysis is the cylindrical shell only; a response should follow that stated scope rather than separately adding the vessel heads\u0027 contribution.",
-                      "calibratedUncertainty":  "High confidence in the wetted-area geometry, the fire-case accumulation basis, the sizing equation, and the orifice comparison, which follow directly from API 520/521, standard circular-segment geometry, and the given facts. Moderate tolerance is appropriate on the final numeric area (approximately 3.75 to 4.05 in^2 depending on rounding through the geometry and sizing steps), since it does not change which standard orifice is required.",
-                      "knownLimitations":  "Assumes Exhibit C\u0027s process-simulation physical properties are representative of actual fire-case relieving conditions for V-204 and that no other credited relief scenario (for example, blocked outlet or control failure) governs a larger required area than the fire case; a complete relief system review would also confirm the fire case is in fact the governing contingency for this vessel, which is outside the scope of this assignment."
+                      "calibratedUncertainty":  "High confidence in the wetted-area geometry, both accumulation bases, the sizing equation, and the orifice comparison, which follow directly from API 520/521, standard circular-segment geometry, and the given facts. Moderate tolerance is appropriate on the final numeric areas (fire case approximately 3.75 to 4.05 in^2, blocked outlet approximately 1.4 to 1.7 in^2) depending on rounding through the geometry and sizing steps, since neither tolerance band changes which contingency governs or which standard orifice is required.",
+                      "knownLimitations":  "Assumes Exhibit C and Exhibit D\u0027s process-simulation physical properties are representative of actual relieving conditions for each contingency, and that fire case and blocked outlet are the only two contingencies that need to be checked for V-204; a complete relief system review would also confirm no other contingency (for example, tube rupture on an upstream exchanger, or external cooling failure) governs a larger required area than the fire case, which is outside the scope of this assignment."
                   },
     "rubric":  {
                    "criteria":  [
@@ -376,7 +433,7 @@
                                         "stableId":  "required-relieving-rate",
                                         "weight":  "7",
                                         "capabilityTag":  "engineering-calculation",
-                                        "observableRequirement":  "Converts Q to the required relieving mass rate using W = Q / L with the given latent heat, arriving at W of approximately 116,900 lb/hr (accept 114,000 to 119,500 lb/hr).",
+                                        "observableRequirement":  "Converts Q to the required fire-case relieving mass rate using W = Q / L with the given latent heat, arriving at W_fire of approximately 116,900 lb/hr (accept 114,000 to 119,500 lb/hr).",
                                         "dependsOn":  "",
                                         "followThroughOf":  ""
                                     },
@@ -392,7 +449,7 @@
                                         "stableId":  "fire-case-accumulation-basis",
                                         "weight":  "8",
                                         "capabilityTag":  "standards-citation",
-                                        "observableRequirement":  "Uses the fire-case accumulation of 21 percent above MAWP (121 percent of MAWP) per ASME Section VIII UG-125 / API 521 to set the relieving pressure at approximately 317 psia, rather than the 110 percent single-device non-fire basis.",
+                                        "observableRequirement":  "Uses the fire-case accumulation of 21% above MAWP (121% of MAWP) per ASME Section VIII UG-125 / API 521 to set the fire-case relieving pressure at approximately 317 psia, rather than the 110% single-device non-fire basis.",
                                         "dependsOn":  "",
                                         "followThroughOf":  ""
                                     },
@@ -400,8 +457,24 @@
                                         "stableId":  "required-orifice-area",
                                         "weight":  "7",
                                         "capabilityTag":  "engineering-calculation",
-                                        "observableRequirement":  "Computes the required effective orifice area of approximately 3.91 in^2 (accept 3.75 to 4.05 in^2) using the API 520 sizing equation with the given Kd, Kb, and Kc.",
+                                        "observableRequirement":  "Computes the required effective orifice area for the fire case of approximately 3.91 in^2 (accept 3.75 to 4.05 in^2) using the API 520 sizing equation with the given Kd, Kb, and Kc.",
                                         "dependsOn":  "required-relieving-rate, api520-coefficient-c, fire-case-accumulation-basis",
+                                        "followThroughOf":  ""
+                                    },
+                                    {
+                                        "stableId":  "blocked-outlet-accumulation-basis",
+                                        "weight":  "8",
+                                        "capabilityTag":  "standards-citation",
+                                        "observableRequirement":  "Uses the 10% non-fire single-device accumulation (110% of MAWP) for the blocked-outlet contingency, setting its relieving pressure at approximately 290 psia, distinct from the fire-case basis.",
+                                        "dependsOn":  "",
+                                        "followThroughOf":  ""
+                                    },
+                                    {
+                                        "stableId":  "blocked-outlet-required-area",
+                                        "weight":  "8",
+                                        "capabilityTag":  "engineering-calculation",
+                                        "observableRequirement":  "Computes the required effective orifice area for the blocked-outlet contingency of approximately 1.54 in^2 (accept 1.4 to 1.7 in^2) using the API 520 sizing equation with Exhibit D\u0027s rate and physical properties.",
+                                        "dependsOn":  "blocked-outlet-accumulation-basis, api520-coefficient-c",
                                         "followThroughOf":  ""
                                     },
                                     {
@@ -413,18 +486,26 @@
                                         "followThroughOf":  ""
                                     },
                                     {
+                                        "stableId":  "governing-contingency-determination",
+                                        "weight":  "9",
+                                        "capabilityTag":  "reasoning",
+                                        "observableRequirement":  "Correctly identifies that the fire case governs (approximately 3.91 in^2 required versus approximately 1.54 in^2 for blocked outlet) rather than assuming the fire case governs without comparison, or incorrectly concluding the blocked-outlet case governs.",
+                                        "dependsOn":  "required-orifice-area, blocked-outlet-required-area",
+                                        "followThroughOf":  ""
+                                    },
+                                    {
                                         "stableId":  "orifice-adequacy-conclusion",
                                         "weight":  "9",
                                         "capabilityTag":  "reasoning",
-                                        "observableRequirement":  "Compares the computed required area to the API 526 standard orifice table, correctly concludes the installed M orifice (3.60 in^2) is undersized, and identifies N (4.34 in^2) as the smallest adequate standard designation, rather than rounding to the nearest size.",
-                                        "dependsOn":  "required-orifice-area",
+                                        "observableRequirement":  "Compares the governing required area to the API 526 standard orifice table, correctly concludes the installed M orifice (3.60 in^2) is undersized, and identifies N (4.34 in^2) as the smallest adequate standard designation, rather than rounding to the nearest size.",
+                                        "dependsOn":  "governing-contingency-determination",
                                         "followThroughOf":  ""
                                     },
                                     {
                                         "stableId":  "thermal-relief-not-credited",
                                         "weight":  "8",
                                         "capabilityTag":  "reasoning",
-                                        "observableRequirement":  "Recognizes that TSV-204B\u0027s rating (8.2 gpm, a liquid volumetric flow rate) is not the same physical quantity as the fire-case requirement (a vapor mass flow rate), that no valid conversion between them is available, and therefore that TSV-204B has no established vapor relieving capacity to credit, rather than treating this as a citation-dependent crediting rule.",
+                                        "observableRequirement":  "Recognizes that TSV-204B\u0027s rating (8.2 gpm, a liquid volumetric flow rate) is not the same physical quantity as the governing vapor relief requirement, that no valid conversion between them is available, and therefore that TSV-204B has no established vapor relieving capacity to credit, rather than treating this as a citation-dependent crediting rule.",
                                         "dependsOn":  "",
                                         "followThroughOf":  ""
                                     },
@@ -432,8 +513,8 @@
                                         "stableId":  "numeric-credited-capacity",
                                         "weight":  "7",
                                         "capabilityTag":  "engineering-calculation",
-                                        "observableRequirement":  "States a numeric total credited fire-case vapor relief capacity from the vessel\u0027s installed devices as a group (approximately 107,600 lb/hr, accept 104,000 to 111,000 lb/hr, all of it from PSV-204A), not just a qualitative crediting conclusion, and compares it to the required rate from part 1.",
-                                        "dependsOn":  "thermal-relief-not-credited, required-orifice-area",
+                                        "observableRequirement":  "States a numeric total credited capacity for the governing contingency from the vessel\u0027s installed devices as a group (approximately 107,600 lb/hr, accept 104,000 to 111,000 lb/hr, all of it from PSV-204A), not just a qualitative crediting conclusion, and compares it to the required rate from part 1.",
+                                        "dependsOn":  "thermal-relief-not-credited, orifice-adequacy-conclusion",
                                         "followThroughOf":  ""
                                     },
                                     {
@@ -445,34 +526,42 @@
                                         "followThroughOf":  ""
                                     },
                                     {
+                                        "stableId":  "cross-contingency-accumulation-error",
+                                        "weight":  "-7",
+                                        "capabilityTag":  "reasoning",
+                                        "observableRequirement":  "Applies the fire-case accumulation basis (21%/121%) to the blocked-outlet contingency, or otherwise uses one accumulation basis for both contingencies instead of recognizing they require different bases.",
+                                        "dependsOn":  "",
+                                        "followThroughOf":  "blocked-outlet-accumulation-basis"
+                                    },
+                                    {
                                         "stableId":  "wetted-area-geometry-inversion-error",
                                         "weight":  "-6",
                                         "capabilityTag":  "engineering-calculation",
                                         "observableRequirement":  "Treats the liquid level as measured from the top, uses the minor (dry) arc instead of the wetted (major) arc, or otherwise inverts the wetted-area geometry, materially understating or overstating the wetted area.",
-                                        "followThroughOf":  "wetted-area-geometry",
-                                        "dependsOn":  ""
+                                        "dependsOn":  "",
+                                        "followThroughOf":  "wetted-area-geometry"
                                     },
                                     {
-                                        "stableId":  "wrong-accumulation-basis",
+                                        "stableId":  "blocked-outlet-governs-error",
                                         "weight":  "-5",
                                         "capabilityTag":  "reasoning",
-                                        "observableRequirement":  "Uses the 110 percent non-fire single-device accumulation basis instead of the 121 percent fire-case basis, or otherwise conflates the two accumulation categories.",
-                                        "followThroughOf":  "fire-case-accumulation-basis",
-                                        "dependsOn":  ""
+                                        "observableRequirement":  "Concludes the blocked-outlet contingency governs, or sizes PSV-204A to the blocked-outlet requirement instead of the larger fire-case requirement.",
+                                        "dependsOn":  "",
+                                        "followThroughOf":  "governing-contingency-determination"
                                     },
                                     {
                                         "stableId":  "summed-device-capacity-error",
                                         "weight":  "-4",
                                         "capabilityTag":  "reasoning",
-                                        "observableRequirement":  "Sums PSV-204A\u0027s and TSV-204B\u0027s rated capacities to argue the combined capacity is adequate for the fire case, instead of recognizing TSV-204B does not contribute to the fire vapor relief requirement.",
-                                        "followThroughOf":  "thermal-relief-not-credited",
-                                        "dependsOn":  ""
+                                        "observableRequirement":  "Sums PSV-204A\u0027s and TSV-204B\u0027s rated capacities to argue the combined capacity is adequate for the governing contingency, instead of recognizing TSV-204B does not contribute to the vapor relief requirement.",
+                                        "dependsOn":  "",
+                                        "followThroughOf":  "thermal-relief-not-credited"
                                     },
                                     {
                                         "stableId":  "memo-structure",
                                         "weight":  "-3",
                                         "capabilityTag":  "output-structure",
-                                        "observableRequirement":  "Does not present the heat-input calculation, the orifice-sizing calculation, and the relief-device-crediting conclusion as separately identifiable parts of the memo.",
+                                        "observableRequirement":  "Does not present the wetted-area geometry, both contingencies\u0027 sizing calculations, the governing-case determination, the orifice-sizing comparison, and the relief-device-crediting conclusion as separately identifiable parts of the memo.",
                                         "dependsOn":  "",
                                         "followThroughOf":  ""
                                     },
@@ -480,7 +569,7 @@
                                         "stableId":  "numeric-precision",
                                         "weight":  "-3",
                                         "capabilityTag":  "output-structure",
-                                        "observableRequirement":  "Reports the required orifice area or the coefficient C without at least two to three significant figures, or omits units, in a way that obscures whether the installed orifice is adequate.",
+                                        "observableRequirement":  "Reports a wetted area, required orifice area, or coefficient C without at least two to three significant figures, or omits units, in a way that obscures whether the installed orifice is adequate or which contingency governs.",
                                         "dependsOn":  "",
                                         "followThroughOf":  ""
                                     }
