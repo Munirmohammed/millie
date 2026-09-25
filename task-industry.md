@@ -16,7 +16,7 @@
 
 1. Using the vessel geometry and liquid level in Exhibit B, determine the wetted surface area of V-204 exposed to the fire, then determine the required fire-case relieving vapor rate using the API 521 heat-input methodology. Show each step: the wetted-area geometry, the heat-input calculation, and the resulting mass relieving rate.
 2. Using the API 520 Part I vapor/gas sizing equation, determine the required effective relief orifice area for the fire case. Derive the API 520 coefficient C from the given specific heat ratio, and state the relieving pressure you use and the accumulation basis that supports it.
-3. Using the blocked-outlet contingency data in Exhibit D, determine the required effective relief orifice area for that contingency, using the accumulation basis appropriate to a non-fire, single-device contingency. State which of the two contingencies (fire case or blocked outlet) governs the required relief orifice area for V-204, and why.
+3. Using the blocked-outlet contingency data in Exhibit D, determine the required propane mass relieving rate for that contingency, then the required effective relief orifice area. State which of the two contingencies (fire case or blocked outlet) governs the required relief orifice area for V-204, and why.
 4. Compare the governing contingency's required effective orifice area to the standard API 526 orifice designation currently installed on PSV-204A (Exhibit A) and state whether PSV-204A remains adequate. If it is not adequate, identify the smallest standard API 526 orifice designation that would be.
 5. Independent of the PSV-204A sizing analysis, determine the total relief vapor capacity, for the governing contingency, that may be credited to V-204's installed relief devices as a group (Exhibit A), accounting for each device's rated service, and identify which device or devices that credited total comes from.
 6. Recommend what should be done about V-204's overpressure protection given your findings, and identify what would need to happen before the next turnaround.
@@ -52,9 +52,9 @@ At the fire-case relieving conditions for V-204:
 
 **Exhibit D: Blocked-outlet contingency basis for V-204 (fictional, current PHA revalidation)**
 
-V-204's downstream outlet control valve (FV-204) can fail closed while the upstream feed compressor (K-204) continues to run, since K-204's control scheme does not automatically trip the machine on high V-204 level alone. Under this contingency, K-204's maximum continued discharge rate of propane vapor into V-204, per the compressor's performance curve at V-204's relief set pressure, is 42,000 lb/hr.
+V-204's downstream outlet control valve (FV-204) can fail closed while the upstream feed compressor (K-204) continues to run, since K-204's control scheme does not automatically trip the machine on high V-204 level alone. Under this contingency, per the compressor's performance curve, K-204's maximum continued discharge capacity of propane vapor into V-204 at the vessel's blocked-outlet relieving pressure is 303 actual cubic feet per minute (ACFM), measured at that relieving pressure and temperature.
 
-Physical properties at the blocked-outlet contingency's relieving conditions (per the process simulation model): relieving temperature 560 degrees Rankine (100 degrees Fahrenheit); compressibility factor (Z) 0.92. The propane's molecular weight and ideal-gas specific heat ratio are the same as given in Exhibit C, since it is the same fluid.
+Physical properties at the blocked-outlet contingency's relieving conditions (per the process simulation model): relieving temperature 560 degrees Rankine (100 degrees Fahrenheit); compressibility factor (Z) 0.92. The propane's molecular weight and ideal-gas specific heat ratio are the same as given in Exhibit C, since it is the same fluid. For reference, the universal gas constant is R = 10.7316 psia*ft3/(lbmol*R).
 
 ### Reference solution
 
@@ -91,11 +91,17 @@ Denominator: 330 x 0.975 x 317.2 x 1.0 x 1.0 is approximately 102,053.
 sqrt(T x Z / M) = sqrt(605 x 0.85 / 44.1) = sqrt(11.666) is approximately 3.415.
 A_fire = (116,900 / 102,053) x 3.415 is approximately 3.91 in².
 
-**3. Required effective orifice area, blocked outlet, and the governing contingency.** The blocked-outlet contingency is a non-fire, single-device operating contingency, not a fire exposure. Per ASME Section VIII Division 1 UG-125 and API 521, the applicable accumulation for a single relief device on a non-fire contingency is 10% above MAWP (110% of MAWP), materially lower than the 21% fire-case accumulation. Using the non-fire basis here (rather than the fire-case basis) is required because this contingency is not a fire exposure.
+**3. Required mass rate and effective orifice area, blocked outlet, and the governing contingency.** The blocked-outlet contingency is a non-fire, single-device operating contingency, not a fire exposure. Per ASME Section VIII Division 1 UG-125 and API 521, the applicable accumulation for a single relief device on a non-fire contingency is 10% above MAWP (110% of MAWP), materially lower than the 21% fire-case accumulation. Using the non-fire basis here (rather than the fire-case basis) is required because this contingency is not a fire exposure.
 
 P1_blocked (gauge) = 250 x 1.10 = 275 psig. P1_blocked (absolute) = 275 + 14.7 = 289.7 psia.
 
-Substituting W_blocked = 42,000 lb/hr (Exhibit D), C = 330 (same k = 1.13, same fluid), Kd = 0.975, P1 = 289.7 psia, Kb = 1.0, Kc = 1.0, T = 560 R, Z = 0.92, M = 44.1 lb/lbmol:
+Exhibit D gives K-204's continued discharge capacity as a volumetric rate (303 ACFM) at the blocked-outlet relieving conditions, not a mass rate, so the mass rate must be derived before the orifice area can be sized. The relieving density follows from the real-gas relationship rho = (P1 x M) / (Z x R x T), using the accumulated relieving pressure just derived (P1_blocked = 289.7 psia, not the 250 psig set pressure or MAWP), Exhibit D's relieving temperature and Z, and Exhibit C's molecular weight, with R = 10.7316 psia*ft3/(lbmol*R):
+
+rho = (289.7 x 44.1) / (0.92 x 10.7316 x 560) = 12,775.8 / 5,528.9 is approximately 2.311 lb/ft3.
+
+W_blocked = ACFM x 60 min/hr x rho = 303 x 60 x 2.311 is approximately 42,000 lb/hr (42,009 lb/hr unrounded).
+
+Substituting W_blocked is approximately 42,000 lb/hr, C = 330 (same k = 1.13, same fluid), Kd = 0.975, P1 = 289.7 psia, Kb = 1.0, Kc = 1.0, T = 560 R, Z = 0.92, M = 44.1 lb/lbmol:
 
 Denominator: 330 x 0.975 x 289.7 x 1.0 x 1.0 is approximately 93,211.
 sqrt(T x Z / M) = sqrt(560 x 0.92 / 44.1) = sqrt(11.685) is approximately 3.418.
@@ -131,7 +137,8 @@ Total credited capacity for the governing contingency (PSV-204A plus TSV-204B) i
 - **+8** Uses the fire-case accumulation of 21% above MAWP (121% of MAWP) per ASME Section VIII UG-125 / API 521 to set the fire-case relieving pressure at approximately 317 psia, rather than the 110% single-device non-fire basis.
 - **+7** Computes the required effective orifice area for the fire case of approximately 3.91 in² (accept 3.75 to 4.05 in²) using the API 520 sizing equation with the given Kd, Kb, and Kc.
 - **+8** Uses the 10% non-fire single-device accumulation (110% of MAWP) for the blocked-outlet contingency, setting its relieving pressure at approximately 290 psia, distinct from the fire-case basis.
-- **+8** Computes the required effective orifice area for the blocked-outlet contingency of approximately 1.54 in² (accept 1.4 to 1.7 in²) using the API 520 sizing equation with Exhibit D's rate and physical properties.
+- **+7** Derives the blocked-outlet mass relieving rate from Exhibit D's volumetric compressor capacity (303 ACFM) using the real-gas density relationship rho = (P1 x M) / (Z x R x T) evaluated at the accumulated blocked-outlet relieving pressure (approximately 289.7 psia), arriving at a density of approximately 2.31 lb/ft³ (accept 2.2 to 2.4 lb/ft³) and W_blocked of approximately 42,000 lb/hr (accept 40,000 to 44,000 lb/hr), rather than treating the ACFM figure as already a mass rate.
+- **+8** Computes the required effective orifice area for the blocked-outlet contingency of approximately 1.54 in² (accept 1.4 to 1.7 in²) using the API 520 sizing equation with the derived mass rate and given physical properties.
 - **+5** Names the specific standard (API 521, API 520, API 526, or ASME Section VIII) that supports each material step, rather than leaving the authority for a calculation unstated. Naming a more precise provision, section, or edition is a plus but is not required, and no credit should be withheld for a missing or different edition/clause number than the reference solution's - those specifics are not disclosed anywhere in the respondent-visible materials, and the task states no external research is expected; the edition and clause numbers in the reference solution are for the grader's own verification, not a respondent-facing requirement.
 
 *Analytical Reasoning*
@@ -141,6 +148,7 @@ Total credited capacity for the governing contingency (PSV-204A plus TSV-204B) i
 - **+7** States a numeric total credited capacity for the governing contingency from the vessel's installed devices as a group (approximately 107,600 lb/hr, accept 104,000 to 111,000 lb/hr, all of it from PSV-204A), not just a qualitative crediting conclusion, and compares it to the required rate from part 1.
 - **+6** Recommends a specific, concrete resolution before the next turnaround that would close the approximately 9,300 lb/hr shortfall (upsizing PSV-204A to at least an N orifice, or adding a properly sized second vapor relief device) rather than leaving the finding unresolved or proposing to restore fireproofing that Exhibit B states will not happen before the turnaround.
 - **-7** Applies the fire-case accumulation basis (21%/121%) to the blocked-outlet contingency, or otherwise uses one accumulation basis for both contingencies instead of recognizing they require different bases.
+- **-5** Computes the blocked-outlet relieving density using the 250 psig set pressure or MAWP (rather than the accumulated 289.7 psia relieving pressure), or otherwise treats Exhibit D's 303 ACFM figure as already a mass flow rate without converting it via density.
 - **-6** Treats the liquid level as measured from the top, uses the minor (dry) arc instead of the wetted (major) arc, or otherwise inverts the wetted-area geometry, materially understating or overstating the wetted area.
 - **-5** Concludes the blocked-outlet contingency governs, or sizes PSV-204A to the blocked-outlet requirement instead of the larger fire-case requirement.
 - **-4** Sums PSV-204A's and TSV-204B's rated capacities to argue the combined capacity is adequate for the governing contingency, instead of recognizing TSV-204B does not contribute to the vapor relief requirement.
