@@ -1,0 +1,5 @@
+Exhibit D: Blocked-outlet contingency basis for V-204 (fictional, current PHA revalidation)
+
+V-204's downstream outlet control valve (FV-204) can fail closed while the upstream feed compressor (K-204) continues to run, since K-204's control scheme does not automatically trip the machine on high V-204 level alone. Under this contingency, K-204's maximum continued discharge rate of propane vapor into V-204, per the compressor's performance curve at V-204's relief set pressure, is 42,000 lb/hr.
+
+Physical properties at the blocked-outlet contingency's relieving conditions (per the process simulation model): relieving temperature 560 degrees Rankine (100 degrees Fahrenheit); compressibility factor (Z) 0.92. The propane's molecular weight and ideal-gas specific heat ratio are the same as given in Exhibit C, since it is the same fluid.
