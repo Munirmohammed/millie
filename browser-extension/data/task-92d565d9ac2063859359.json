@@ -192,9 +192,15 @@
                                              "provenance":  "Derivation wetted_area"
                                          },
                                          {
-                                             "key":  "blocked.max_discharge_rate",
-                                             "value":  "42000",
-                                             "unit":  "lb/hr propane vapor",
+                                             "key":  "blocked.compressor_capacity_acfm",
+                                             "value":  "303",
+                                             "unit":  "ACFM (actual cubic feet per minute)",
+                                             "provenance":  "Exhibit D"
+                                         },
+                                         {
+                                             "key":  "standard.universal_gas_constant_r",
+                                             "value":  "10.7316",
+                                             "unit":  "psia*ft^3/(lbmol*R)",
                                              "provenance":  "Exhibit D"
                                          },
                                          {
@@ -220,6 +226,12 @@
                                              "value":  "289.7",
                                              "unit":  "psia",
                                              "provenance":  "Derivation blocked_relieving_pressure"
+                                         },
+                                         {
+                                             "key":  "derived.blocked_mass_rate_w",
+                                             "value":  "42000",
+                                             "unit":  "lb/hr propane vapor",
+                                             "provenance":  "Derivation blocked_outlet_mass_rate"
                                          }
                                      ],
                   "derivations":  [
@@ -288,9 +300,17 @@
                                           "tolerance":  "0.5 percent"
                                       },
                                       {
+                                          "id":  "blocked_outlet_mass_rate",
+                                          "formulaVersion":  "v1",
+                                          "inputFactKeys":  "blocked.compressor_capacity_acfm, derived.blocked_relieving_pressure_p1, sim.molecular_weight, blocked.Z, blocked.relieving_temp_R, standard.universal_gas_constant_r",
+                                          "result":  "42000",
+                                          "rounding":  "3 sig figs",
+                                          "tolerance":  "5 percent"
+                                      },
+                                      {
                                           "id":  "blocked_outlet_required_area",
                                           "formulaVersion":  "v1",
-                                          "inputFactKeys":  "blocked.max_discharge_rate, derived.api520_coefficient_c, derived.blocked_relieving_pressure_p1, psv204a.kd, psv204a.kb, psv204a.kc, blocked.relieving_temp_R, blocked.Z, sim.molecular_weight",
+                                          "inputFactKeys":  "derived.blocked_mass_rate_w, derived.api520_coefficient_c, derived.blocked_relieving_pressure_p1, psv204a.kd, psv204a.kb, psv204a.kc, blocked.relieving_temp_R, blocked.Z, sim.molecular_weight",
                                           "result":  "1.54",
                                           "rounding":  "2 decimals",
                                           "tolerance":  "5 percent"
